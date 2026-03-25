@@ -1,5 +1,6 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import { supabase } from "./src/supabase";
+import { BIRTHDAY_DATA, BIRTHDAY_TOPIC_GROUPS, BIRTHDAY_STAGE_ACCENT } from "./src/birthdayModules";
 
 /* ─────────────────────────────────────────────
    HORIZONS GETAWAYS — B2B COLD OUTBOUND SCRIPT
@@ -474,15 +475,37 @@ const STAGE_ACCENT = {
 const BRICK = "#B34233";
 
 // ─── DASHBOARD ───────────────────────────────
+const START_MODULE = {
+  b2b: "opening",
+  birthday: "bday_opening_birthday",
+};
+
+const ALL_DATA = { ...SCRIPT_DATA, ...BIRTHDAY_DATA };
+
 export default function HorizonsScript({ session }) {
   const userId = session?.user?.id;
   const userEmail = session?.user?.email;
 
+  const [scriptMode, setScriptMode] = useState("b2b");
   const [currentId, setCurrentId] = useState("opening");
   const [recentIds, setRecentIds] = useState(["opening"]);
   const [userNotes, setUserNotes] = useState({});
   const [noteInput, setNoteInput] = useState("");
-  const node = SCRIPT_DATA[currentId];
+
+  const activeData = scriptMode === "birthday" ? BIRTHDAY_DATA : SCRIPT_DATA;
+  const activeGroups = scriptMode === "birthday" ? BIRTHDAY_TOPIC_GROUPS : TOPIC_GROUPS;
+  const node = ALL_DATA[currentId];
+
+  const getStageColor = useCallback((stage) => {
+    if (scriptMode === "birthday") return BIRTHDAY_STAGE_ACCENT[stage] || "#6B7280";
+    return STAGE_ACCENT[stage] || "#6B7280";
+  }, [scriptMode]);
+
+  const handleModeSwitch = useCallback((newMode) => {
+    setScriptMode(newMode);
+    setCurrentId(START_MODULE[newMode]);
+    setRecentIds([START_MODULE[newMode]]);
+  }, []);
 
   // ─── Load notes from Supabase on mount ───
   useEffect(() => {
@@ -555,7 +578,7 @@ export default function HorizonsScript({ session }) {
   }, []);
 
   const navigate = useCallback((id) => {
-    if (!SCRIPT_DATA[id]) return;
+    if (!ALL_DATA[id]) return;
     setCurrentId(id);
     setRecentIds(prev => {
       const filtered = prev.filter(x => x !== id);
@@ -582,13 +605,42 @@ export default function HorizonsScript({ session }) {
           maxWidth: "100%", margin: "0 auto", padding: "0 20px",
           display: "flex", justifyContent: "space-between", alignItems: "center"
         }}>
-          <div>
-            <h1 style={{ fontSize: "16px", fontWeight: 700, margin: 0, color: BRICK, letterSpacing: "-0.01em" }}>
-              Horizons Getaways
-            </h1>
-            <p style={{ fontSize: "10px", color: "#A8A09A", margin: "1px 0 0", letterSpacing: "0.05em", fontWeight: 500 }}>
-              B2B COLD OUTBOUND SCRIPT DASHBOARD
-            </p>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <div>
+              <h1 style={{ fontSize: "16px", fontWeight: 700, margin: 0, color: BRICK, letterSpacing: "-0.01em" }}>
+                Horizons Getaways
+              </h1>
+              <p style={{ fontSize: "10px", color: "#A8A09A", margin: "1px 0 0", letterSpacing: "0.05em", fontWeight: 500 }}>
+                {scriptMode === "birthday"
+                  ? "BIRTHDAY OUTREACH — PAST FLORIDA GUESTS"
+                  : "B2B COLD OUTBOUND — TRAVEL AGENCY PARTNERSHIPS"}
+              </p>
+            </div>
+            <div style={{
+              display: "flex", gap: "3px",
+              background: "#E8E4E1", borderRadius: "8px", padding: "3px"
+            }}>
+              {[
+                { key: "b2b", label: "B2B Agency" },
+                { key: "birthday", label: "Birthday Outreach" },
+              ].map(({ key, label }) => (
+                <button
+                  key={key}
+                  onClick={() => handleModeSwitch(key)}
+                  style={{
+                    padding: "5px 14px", borderRadius: "6px",
+                    border: "none", cursor: "pointer",
+                    fontSize: "12px", fontWeight: 500,
+                    background: scriptMode === key ? "#FFFFFF" : "transparent",
+                    color: scriptMode === key ? "#1F2937" : "#6B7280",
+                    boxShadow: scriptMode === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
+                    transition: "all 0.15s ease",
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             {userEmail && (
@@ -597,7 +649,7 @@ export default function HorizonsScript({ session }) {
               </span>
             )}
             <button
-              onClick={() => navigate("opening")}
+              onClick={() => { setCurrentId(START_MODULE[scriptMode]); setRecentIds([START_MODULE[scriptMode]]); }}
               style={{
                 background: "#FDF2F0", border: "1px solid #E8D5D1",
                 color: BRICK, padding: "7px 16px", borderRadius: "7px",
@@ -632,7 +684,7 @@ export default function HorizonsScript({ session }) {
 
         {/* ─── TOP LEFT: Script Panel ─── */}
         <div style={{ ...panelStyle, minHeight: 0, overflowY: "auto" }}>
-          <PanelHeader label="Script" sub={`${node.stage} — ${node.method}`} accent={STAGE_ACCENT[node.stage] || "#6B7280"} />
+          <PanelHeader label="Script" sub={`${node.stage} — ${node.method}`} accent={getStageColor(node.stage)} />
 
           <div style={{ padding: "20px 24px 8px" }}>
             <h2 style={{
@@ -681,7 +733,7 @@ export default function HorizonsScript({ session }) {
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                   {node.responses.map((r, i) => {
-                    const target = SCRIPT_DATA[r.next];
+                    const target = ALL_DATA[r.next];
                     return (
                       <button
                         key={i}
@@ -691,7 +743,7 @@ export default function HorizonsScript({ session }) {
                         onMouseOut={e => { e.currentTarget.style.background = "#FAFAF9"; e.currentTarget.style.borderColor = "#E5E2DF"; }}
                       >
                         <span style={{ flex: 1 }}>{r.label}</span>
-                        <span style={tagStyle(STAGE_ACCENT[target?.stage] || "#6B7280")}>
+                        <span style={tagStyle(getStageColor(target?.stage))}>
                           {target?.stage || "Next"}
                         </span>
                       </button>
@@ -702,14 +754,14 @@ export default function HorizonsScript({ session }) {
             )}
 
             {/* All topics grouped */}
-            {Object.entries(TOPIC_GROUPS).map(([group, ids]) => (
+            {Object.entries(activeGroups).map(([group, ids]) => (
               <div key={group} style={{ marginBottom: "14px" }}>
-                <div style={groupLabelStyle(STAGE_ACCENT[group] || "#6B7280")}>
+                <div style={groupLabelStyle(getStageColor(group))}>
                   {group}
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
                   {ids.map(id => {
-                    const n = SCRIPT_DATA[id];
+                    const n = ALL_DATA[id];
                     const active = id === currentId;
                     return (
                       <button
@@ -718,9 +770,9 @@ export default function HorizonsScript({ session }) {
                         style={{
                           padding: "5px 10px", fontSize: "11.5px", fontWeight: active ? 600 : 400,
                           borderRadius: "6px", cursor: "pointer",
-                          border: active ? `1px solid ${STAGE_ACCENT[group] || "#6B7280"}` : "1px solid #E5E2DF",
+                          border: active ? `1px solid ${getStageColor(group)}` : "1px solid #E5E2DF",
                           background: active ? "#FDF2F0" : "#FAFAF9",
-                          color: active ? BRICK : "#6B7280",
+                          color: active ? getStageColor(group) : "#6B7280",
                           transition: "all 0.12s",
                           whiteSpace: "nowrap"
                         }}
@@ -832,10 +884,10 @@ export default function HorizonsScript({ session }) {
           <div style={{ padding: "14px 16px 20px" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
               {recentIds.map((id, i) => {
-                const n = SCRIPT_DATA[id];
+                const n = ALL_DATA[id];
                 if (!n) return null;
                 const active = id === currentId;
-                const accent = STAGE_ACCENT[n.stage] || "#6B7280";
+                const accent = getStageColor(n.stage);
                 return (
                   <button
                     key={id}
