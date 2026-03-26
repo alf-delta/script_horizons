@@ -673,7 +673,7 @@ export default function HorizonsScript({ session }) {
       <div style={{
         background: "#FFFFFF",
         borderBottom: "1px solid #E0DCDA",
-        padding: "10px 0",
+        padding: "4px 0",
         flexShrink: 0
       }}>
         <div style={{
@@ -682,18 +682,11 @@ export default function HorizonsScript({ session }) {
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <div>
-              <h1 style={{ fontSize: "16px", fontWeight: 700, margin: 0, color: BRICK, letterSpacing: "-0.01em" }}>
-                Horizons Getaways
-              </h1>
-              <p style={{ fontSize: "10px", color: "#A8A09A", margin: "1px 0 0", letterSpacing: "0.05em", fontWeight: 500 }}>
-                {scriptMode === "birthday"
-                  ? "BIRTHDAY OUTREACH — PAST FLORIDA GUESTS"
-                  : "B2B COLD OUTBOUND — TRAVEL AGENCY PARTNERSHIPS"}
-              </p>
+              <img src="/logo.png" alt="Horizons Getaways" style={{ height: "96px", display: "block" }} />
             </div>
             <div style={{
-              display: "flex", gap: "3px",
-              background: "#E8E4E1", borderRadius: "8px", padding: "3px"
+              display: "flex", gap: "4px",
+              background: "#E8E4E1", borderRadius: "10px", padding: "4px"
             }}>
               {[
                 { key: "b2b", label: "B2B Agency" },
@@ -703,9 +696,9 @@ export default function HorizonsScript({ session }) {
                   key={key}
                   onClick={() => handleModeSwitch(key)}
                   style={{
-                    padding: "5px 14px", borderRadius: "6px",
+                    padding: "8px 20px", borderRadius: "8px",
                     border: "none", cursor: "pointer",
-                    fontSize: "12px", fontWeight: 500,
+                    fontSize: "14px", fontWeight: 600,
                     background: scriptMode === key ? "#FFFFFF" : "transparent",
                     color: scriptMode === key ? "#1F2937" : "#6B7280",
                     boxShadow: scriptMode === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
@@ -717,8 +710,10 @@ export default function HorizonsScript({ session }) {
               ))}
             </div>
             <div style={{
-                display: "flex", gap: "2px",
-                background: "#E8E4E1", borderRadius: "6px", padding: "2px"
+                display: "flex", gap: "3px",
+                background: "#E8E4E1", borderRadius: "8px", padding: "3px",
+                border: "1px solid rgba(179,66,51,0.3)",
+                boxShadow: "0 0 8px rgba(179,66,51,0.25), 0 0 20px rgba(179,66,51,0.12), 0 0 40px rgba(179,66,51,0.06)"
               }}>
                 {[
                   { key: "en", label: "EN" },
@@ -728,11 +723,11 @@ export default function HorizonsScript({ session }) {
                     key={key}
                     onClick={() => setScriptLang(key)}
                     style={{
-                      padding: "4px 10px", borderRadius: "5px",
+                      padding: "6px 14px", borderRadius: "6px",
                       border: "none", cursor: "pointer",
-                      fontSize: "11px", fontWeight: 600,
+                      fontSize: "13px", fontWeight: 700,
                       background: scriptLang === key ? "#FFFFFF" : "transparent",
-                      color: scriptLang === key ? "#1F2937" : "#6B7280",
+                      color: scriptLang === key ? "#B34233" : "#6B7280",
                       boxShadow: scriptLang === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
                       transition: "all 0.15s ease",
                     }}
