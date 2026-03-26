@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo, useEffect } from "react";
 import { supabase } from "./src/supabase";
 import { BIRTHDAY_DATA, BIRTHDAY_TOPIC_GROUPS, BIRTHDAY_STAGE_ACCENT } from "./src/birthdayModules";
 import { SPANISH_DATA, SPANISH_TOPIC_GROUPS } from "./src/spanishModules";
+import { SPANISH_BIRTHDAY_DATA, SPANISH_BIRTHDAY_TOPIC_GROUPS } from "./src/spanishBirthdayModules";
 
 /* ─────────────────────────────────────────────
    HORIZONS GETAWAYS — B2B COLD OUTBOUND SCRIPT
@@ -562,10 +563,12 @@ export default function HorizonsScript({ session }) {
   const [userNotes, setUserNotes] = useState({});
   const [noteInput, setNoteInput] = useState("");
 
-  const activeData = scriptMode === "birthday" ? BIRTHDAY_DATA
-    : scriptLang === "es" ? SPANISH_DATA : SCRIPT_DATA;
-  const activeGroups = scriptMode === "birthday" ? BIRTHDAY_TOPIC_GROUPS
-    : scriptLang === "es" ? SPANISH_TOPIC_GROUPS : TOPIC_GROUPS;
+  const activeData = scriptMode === "birthday"
+    ? (scriptLang === "es" ? SPANISH_BIRTHDAY_DATA : BIRTHDAY_DATA)
+    : (scriptLang === "es" ? SPANISH_DATA : SCRIPT_DATA);
+  const activeGroups = scriptMode === "birthday"
+    ? (scriptLang === "es" ? SPANISH_BIRTHDAY_TOPIC_GROUPS : BIRTHDAY_TOPIC_GROUPS)
+    : (scriptLang === "es" ? SPANISH_TOPIC_GROUPS : TOPIC_GROUPS);
   const node = activeData[currentId] || ALL_DATA[currentId];
 
   const getStageColor = useCallback((stage) => {
@@ -577,7 +580,6 @@ export default function HorizonsScript({ session }) {
     setScriptMode(newMode);
     setCurrentId(START_MODULE[newMode]);
     setRecentIds([START_MODULE[newMode]]);
-    if (newMode === "birthday") setScriptLang("en");
   }, []);
 
   // ─── Load notes from Supabase on mount ───
@@ -714,8 +716,7 @@ export default function HorizonsScript({ session }) {
                 </button>
               ))}
             </div>
-            {scriptMode === "b2b" && (
-              <div style={{
+            <div style={{
                 display: "flex", gap: "2px",
                 background: "#E8E4E1", borderRadius: "6px", padding: "2px"
               }}>
@@ -740,7 +741,6 @@ export default function HorizonsScript({ session }) {
                   </button>
                 ))}
               </div>
-            )}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             {userEmail && (
