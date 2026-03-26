@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import { supabase } from "./src/supabase";
 import { BIRTHDAY_DATA, BIRTHDAY_TOPIC_GROUPS, BIRTHDAY_STAGE_ACCENT } from "./src/birthdayModules";
+import { SPANISH_DATA, SPANISH_TOPIC_GROUPS } from "./src/spanishModules";
 
 /* ─────────────────────────────────────────────
    HORIZONS GETAWAYS — B2B COLD OUTBOUND SCRIPT
@@ -8,6 +9,74 @@ import { BIRTHDAY_DATA, BIRTHDAY_TOPIC_GROUPS, BIRTHDAY_STAGE_ACCENT } from "./s
    ───────────────────────────────────────────── */
 
 const SCRIPT_DATA = {
+  gatekeeper: {
+    id: "gatekeeper",
+    stage: "Opening",
+    stageNum: 1,
+    method: "SNAP",
+    title: "Gatekeeper — Who Am I Speaking With?",
+    cogTip: "Your only goal here is to find out if this person can say 'yes' to a partnership. Don't pitch yet — qualify first. Keep it warm and respectful.",
+    script: `"Hi, this is [Your Name] with Horizons Getaways — we're an outdoor hospitality company. I'm reaching out because we work with travel agencies on a referral partnership, and I wanted to connect with the person who handles new partnerships or vendor relationships. Would that be you, or is there someone better I should speak with?"`,
+    notes: [
+      "This is NOT a pitch — it's a routing question. Stay light.",
+      "Listen to their tone: if they sound senior and engaged, they're likely a decision-maker even if they don't say so",
+      "If they say 'that's me' — transition immediately, don't over-qualify",
+      "If they hesitate — they're probably not the DM but might be influential"
+    ],
+    responses: [
+      { label: "That's me / I handle that", next: "opening" },
+      { label: "Let me transfer you / hold on", next: "opening" },
+      { label: "They're not available right now", next: "gatekeeper_front_desk" },
+      { label: "I can pass along information", next: "gatekeeper_influencer" },
+      { label: "We're not interested", next: "obj_not_interested" }
+    ]
+  },
+
+  gatekeeper_influencer: {
+    id: "gatekeeper_influencer",
+    stage: "Opening",
+    stageNum: 1,
+    method: "H2H",
+    title: "Influencer — Build an Internal Ally",
+    cogTip: "This person can't say yes, but they CAN get your message to the person who can. Treat them as a partner, not an obstacle.",
+    script: `"That's really helpful, thank you. And just so I know who I'm speaking with — what's your name and role? [Wait for answer]\n\nGreat, [Name]. Here's the quick version so you have context: we partner with travel agencies to offer their clients premium glamping experiences in the Southeast, and agencies earn a commission on every referral. Zero operational work on your end.\n\nWould it make sense for me to send a quick one-pager you could share with [the owner / your manager / the partnerships lead]? That way they can see if it's worth a conversation — and I'd love to follow up with them directly if they're open to it.\n\nWhat's the best email to send that to, and who specifically should I address it to?"`,
+    notes: [
+      "Get their name — you need a reference point when you call back",
+      "Give them just enough to be curious, not a full pitch",
+      "The one-pager does the selling for you — make it easy for them to forward",
+      "Always ask for the DM's name and email — that's the real prize here",
+      "Thank them genuinely — they might mention you positively to the DM"
+    ],
+    responses: [
+      { label: "Sure, I'll pass it along — here's the email", next: "callback" },
+      { label: "Let me connect you directly", next: "opening" },
+      { label: "Just send it to our general email", next: "callback" },
+      { label: "We're not looking for new partners", next: "graceful_exit" }
+    ]
+  },
+
+  gatekeeper_front_desk: {
+    id: "gatekeeper_front_desk",
+    stage: "Opening",
+    stageNum: 1,
+    method: "SNAP",
+    title: "Front Desk — Get the Right Contact",
+    cogTip: "Receptionist = information source. Be warm, be brief, get a name and a time. Don't try to pitch through them.",
+    script: `"No problem at all — I totally understand. Could you help me with two quick things?\n\nFirst, who would be the best person to speak with about new partnerships or vendor programs? Just so I can ask for them by name next time.\n\n[Wait for name]\n\nPerfect, thank you. And is there a good time to catch [Name] — mornings, afternoons? I want to be respectful of their schedule.\n\n[Wait for answer]\n\nGreat — I'll try [Name] on [day/time]. Thanks so much for your help, [Receptionist Name]. Have a great day!"`,
+    notes: [
+      "Goal #1: Get the DM's name",
+      "Goal #2: Get the best time to call",
+      "Goal #3: Get the receptionist's name (so next time you say 'hi [Name], it's [you] again')",
+      "Don't explain the partnership — they can't act on it",
+      "Log everything in CRM immediately: DM name, best time, receptionist name"
+    ],
+    responses: [
+      { label: "Got DM name + best time — will call back", next: "callback" },
+      { label: "They transferred me!", next: "opening" },
+      { label: "Won't share any info", next: "graceful_exit" }
+    ]
+  },
+
   opening: {
     id: "opening",
     stage: "Opening",
@@ -452,7 +521,7 @@ const SCRIPT_DATA = {
 
 // ─── TOPIC GROUPS ────────────────────────────
 const TOPIC_GROUPS = {
-  "Opening": ["opening", "credibility"],
+  "Opening": ["gatekeeper", "gatekeeper_influencer", "gatekeeper_front_desk", "opening", "credibility"],
   "Value Pitch": ["pitch", "commission", "properties"],
   "Qualification": ["qualification", "onboarding"],
   "Close": ["close", "success", "callback"],
@@ -476,7 +545,7 @@ const BRICK = "#B34233";
 
 // ─── DASHBOARD ───────────────────────────────
 const START_MODULE = {
-  b2b: "opening",
+  b2b: "gatekeeper",
   birthday: "bday_opening_birthday",
 };
 
@@ -487,14 +556,17 @@ export default function HorizonsScript({ session }) {
   const userEmail = session?.user?.email;
 
   const [scriptMode, setScriptMode] = useState("b2b");
+  const [scriptLang, setScriptLang] = useState("en");
   const [currentId, setCurrentId] = useState("opening");
   const [recentIds, setRecentIds] = useState(["opening"]);
   const [userNotes, setUserNotes] = useState({});
   const [noteInput, setNoteInput] = useState("");
 
-  const activeData = scriptMode === "birthday" ? BIRTHDAY_DATA : SCRIPT_DATA;
-  const activeGroups = scriptMode === "birthday" ? BIRTHDAY_TOPIC_GROUPS : TOPIC_GROUPS;
-  const node = ALL_DATA[currentId];
+  const activeData = scriptMode === "birthday" ? BIRTHDAY_DATA
+    : scriptLang === "es" ? SPANISH_DATA : SCRIPT_DATA;
+  const activeGroups = scriptMode === "birthday" ? BIRTHDAY_TOPIC_GROUPS
+    : scriptLang === "es" ? SPANISH_TOPIC_GROUPS : TOPIC_GROUPS;
+  const node = activeData[currentId] || ALL_DATA[currentId];
 
   const getStageColor = useCallback((stage) => {
     if (scriptMode === "birthday") return BIRTHDAY_STAGE_ACCENT[stage] || "#6B7280";
@@ -505,6 +577,7 @@ export default function HorizonsScript({ session }) {
     setScriptMode(newMode);
     setCurrentId(START_MODULE[newMode]);
     setRecentIds([START_MODULE[newMode]]);
+    if (newMode === "birthday") setScriptLang("en");
   }, []);
 
   // ─── Load notes from Supabase on mount ───
@@ -641,6 +714,33 @@ export default function HorizonsScript({ session }) {
                 </button>
               ))}
             </div>
+            {scriptMode === "b2b" && (
+              <div style={{
+                display: "flex", gap: "2px",
+                background: "#E8E4E1", borderRadius: "6px", padding: "2px"
+              }}>
+                {[
+                  { key: "en", label: "EN" },
+                  { key: "es", label: "ES" },
+                ].map(({ key, label }) => (
+                  <button
+                    key={key}
+                    onClick={() => setScriptLang(key)}
+                    style={{
+                      padding: "4px 10px", borderRadius: "5px",
+                      border: "none", cursor: "pointer",
+                      fontSize: "11px", fontWeight: 600,
+                      background: scriptLang === key ? "#FFFFFF" : "transparent",
+                      color: scriptLang === key ? "#1F2937" : "#6B7280",
+                      boxShadow: scriptLang === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
+                      transition: "all 0.15s ease",
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             {userEmail && (
@@ -711,7 +811,7 @@ export default function HorizonsScript({ session }) {
             <div style={{
               background: "#F8F7F5", borderRadius: "10px",
               border: "1px solid #ECEAE7",
-              padding: "22px 24px", fontSize: "14.5px", lineHeight: 1.8,
+              padding: "22px 24px", fontSize: "19px", lineHeight: 1.8,
               color: "#374151", whiteSpace: "pre-wrap",
               fontFamily: "'Georgia', serif"
             }}>

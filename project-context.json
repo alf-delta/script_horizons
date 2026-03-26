@@ -1,0 +1,185 @@
+{
+  "project": {
+    "name": "Horizons Getaways — Script Dashboard",
+    "description": "Interactive B2B cold outbound call script dashboard for Horizons Getaways sales managers. Used during live phone calls to US travel agencies (Southeast focus) to pitch a glamping/outdoor hospitality partnership and referral program.",
+    "repo": "https://github.com/alf-delta/script_horizons",
+    "planned_hosting": "Railway",
+    "created": "2026-03-25"
+  },
+
+  "business_context": {
+    "company": "Horizons Getaways",
+    "industry": "Glamping / Outdoor Hospitality",
+    "location": "South Carolina, US Southeast",
+    "target_audience": "US Travel Agencies (Southeast focus)",
+    "offer": "Partnership / Referral Program — agencies refer clients, earn commission per booking, zero operational overhead",
+    "call_type": "B2B cold outbound",
+    "sales_methodologies": ["SPIN Selling", "SNAP Selling", "Heart-to-Heart (H2H)", "Challenger Sale"]
+  },
+
+  "tech_stack": {
+    "frontend": "React 19 + Vite 6",
+    "language": "JavaScript (JSX)",
+    "auth": "Supabase Auth (email + password)",
+    "database": "Supabase PostgreSQL",
+    "hosting_plan": "Railway (frontend), Supabase (backend/auth/db)",
+    "dependencies": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0",
+      "@supabase/supabase-js": "latest",
+      "vite": "^6.0.0",
+      "@vitejs/plugin-react": "^4.3.0"
+    }
+  },
+
+  "architecture": {
+    "entry_point": "index.html -> src/main.jsx",
+    "auth_flow": "src/main.jsx checks Supabase session -> LoginScreen or Dashboard",
+    "main_component": "horizons-getaways-script.jsx (HorizonsScript)",
+    "supabase_client": "src/supabase.js",
+    "login_screen": "src/LoginScreen.jsx",
+    "env_vars": {
+      "VITE_SUPABASE_URL": "Supabase project URL",
+      "VITE_SUPABASE_ANON_KEY": "Supabase publishable (anon) key"
+    }
+  },
+
+  "database_schema": {
+    "tables": {
+      "user_notes": {
+        "description": "Dynamic notes created by managers per script module, stored per user with Row Level Security",
+        "columns": {
+          "id": "uuid (PK, auto-generated)",
+          "user_id": "uuid (FK -> auth.users, cascade delete)",
+          "module_id": "text (references script module ID like 'opening', 'pitch', etc.)",
+          "text": "text (note content)",
+          "done": "boolean (checkbox state, default false)",
+          "created_at": "timestamptz (auto-generated)"
+        },
+        "rls_policies": [
+          "Users can read own notes",
+          "Users can insert own notes",
+          "Users can update own notes",
+          "Users can delete own notes"
+        ]
+      }
+    }
+  },
+
+  "ui_layout": {
+    "type": "4-panel dashboard, 100vh, no page scroll",
+    "grid": "2 columns (1fr + 320px), 2 rows (2fr + 1fr)",
+    "panels": {
+      "top_left": "Script — current module text, cognitive tip, title, stage/method badge",
+      "top_right": "Topics & Responses — current client responses + all modules grouped by stage",
+      "bottom_left": "Notes — static script tips + dynamic user notes (add/check/delete, synced to Supabase)",
+      "bottom_right": "Recent Topics — last 8 visited modules"
+    },
+    "header": "Company name, subtitle, user email, Restart Call button, Sign Out button",
+    "color_palette": {
+      "background": "#F0EDEB (warm light grey)",
+      "panels": "#FFFFFF (white)",
+      "borders": "#E0DCDA",
+      "primary_accent": "#B34233 (brick red)",
+      "secondary_accents": {
+        "Opening": "#B34233",
+        "Value Pitch": "#5A7B8F",
+        "Qualification": "#7B6B5D",
+        "Close": "#4A7C59",
+        "Objection": "#C4553A",
+        "Info Module": "#6B7280"
+      },
+      "text_primary": "#1F2937",
+      "text_secondary": "#6B7280",
+      "text_muted": "#A8A09A"
+    }
+  },
+
+  "script_modules": {
+    "total": 22,
+    "stages": {
+      "Opening": {
+        "modules": ["opening", "credibility"],
+        "description": "First contact — personalized opener and credibility establishment"
+      },
+      "Value Pitch": {
+        "modules": ["pitch", "commission", "properties"],
+        "description": "Core value proposition — partnership offer, commission details, property info"
+      },
+      "Qualification": {
+        "modules": ["qualification", "onboarding"],
+        "description": "SPIN discovery questions and onboarding process explanation"
+      },
+      "Close": {
+        "modules": ["close", "success", "callback"],
+        "description": "Schedule meeting, post-call checklist, callback scheduling"
+      },
+      "Objections": {
+        "modules": [
+          "obj_not_interested",
+          "obj_busy",
+          "obj_send_email",
+          "obj_competitor",
+          "obj_not_niche",
+          "obj_think",
+          "obj_commission_low",
+          "obj_decision_maker"
+        ],
+        "description": "8 objection-handling modules with specific reframes and pivots"
+      },
+      "Info Modules": {
+        "modules": ["tracking", "seasonal", "families", "guest_support", "graceful_exit"],
+        "description": "On-demand info blocks — referral tracking, seasonality, families, support, graceful exit"
+      }
+    },
+    "module_structure": {
+      "id": "Unique identifier used for navigation",
+      "stage": "Pipeline stage name",
+      "stageNum": "Stage number or label (1-5, OBJ, INFO)",
+      "method": "Sales methodology used (SPIN, SNAP, H2H, Challenger)",
+      "title": "Display title",
+      "cogTip": "Cognitive/behavioral tip for the caller",
+      "script": "Actual words to say (with [placeholders] for personalization)",
+      "notes": "Array of manager coaching notes",
+      "responses": "Array of {label, next} — client response options that navigate to other modules"
+    },
+    "navigation": "Graph-based — each module links to others via response buttons. Non-linear flow, caller jumps based on client reaction."
+  },
+
+  "features": {
+    "implemented": [
+      "Interactive script navigation with response-based routing",
+      "4-panel dashboard layout (script, topics, notes, recent)",
+      "Per-module cognitive tips and manager coaching notes",
+      "Dynamic user notes with add/check-off/delete (Supabase-synced)",
+      "Email + password authentication",
+      "Row Level Security — each manager sees only their own notes",
+      "Recently visited modules tracker (last 8)",
+      "Quick jump to any module via topic groups",
+      "Responsive within 100vh viewport",
+      "Custom favicon"
+    ],
+    "not_yet_implemented": [
+      "Deploy to Railway",
+      "Call logging / CRM integration",
+      "Manager analytics (calls made, modules visited, conversion tracking)",
+      "Admin panel for managing manager accounts",
+      "Script A/B testing",
+      "Fill in actual commission numbers and property details in [placeholders]"
+    ]
+  },
+
+  "files": {
+    "index.html": "HTML entry point with favicon link",
+    "vite.config.js": "Vite config with React plugin",
+    "package.json": "Dependencies: react, react-dom, @supabase/supabase-js, vite",
+    "src/main.jsx": "App root — auth session check, renders LoginScreen or HorizonsScript",
+    "src/supabase.js": "Supabase client initialization (reads from env vars)",
+    "src/LoginScreen.jsx": "Email/password login + signup form",
+    "horizons-getaways-script.jsx": "Main dashboard component — all script data, UI, Supabase notes CRUD",
+    "supabase-migration.sql": "SQL to create user_notes table with RLS policies",
+    "public/favicon.png": "Site favicon",
+    ".env": "Environment variables (VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY) — not in git",
+    ".gitignore": "Excludes node_modules, dist, .env"
+  }
+}
