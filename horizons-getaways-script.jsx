@@ -105,7 +105,7 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: "Credibility Establishment",
     cogTip: "Rule of Three: who we are, what we do, one proof point.",
-    script: `"Great question — Horizons Getaways is a glamping and outdoor hospitality brand based in South Carolina. We operate premium nature retreats, and we've been partnering with travel agencies to offer their clients unique getaway experiences. Agencies we work with typically see a [X]% commission on every booking they refer. Would that kind of arrangement be worth a quick conversation?"`,
+    script: `"Great question — Horizons Getaways is a glamping and outdoor hospitality brand based in South Carolina. We operate premium nature retreats, and we've been partnering with travel agencies to offer their clients unique getaway experiences. Agencies we work with earn a tiered commission on every booking they refer — starting at 15%. Would that kind of arrangement be worth a quick conversation?"`,
     notes: [
       "Three beats: identity → what we do → proof/benefit",
       "Anchor with commission % to make it tangible immediately",
@@ -125,7 +125,7 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: "Partnership Value Proposition",
     cogTip: "Problem → Impact → Solution. Three sentences max before asking a question.",
-    script: `"Here's the short version: outdoor and glamping travel has grown 40%+ since 2020, and a lot of agencies tell us they're getting more requests for unique, nature-based experiences but don't have reliable partners to fulfill them.\n\nHorizons Getaways fills that gap. We handle everything — the property, the experience, guest support — and your agency earns a commission on every referral. No inventory risk, no logistics on your end."`,
+    script: `"Here's the short version: outdoor and glamping travel has been one of the fastest-growing segments in hospitality, and a lot of agencies tell us they're getting more requests for unique, nature-based experiences but don't have reliable partners to fulfill them.\n\nHorizons Getaways fills that gap. We handle everything — the property, the experience, guest support — and your agency earns a commission on every referral. No inventory risk, no logistics on your end."`,
     notes: [
       "Lead with the market trend (external validation)",
       "Frame the problem THEY face (demand without supply)",
@@ -145,11 +145,11 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: "Commission & Economics",
     cogTip: "Be specific with numbers. Vague = distrust.",
-    script: `"Our standard partner commission is [X]% per booking, paid out [monthly / per booking]. Average booking value runs between $[Y] and $[Z] per night, so for a typical 2-night stay, you're looking at $[amount] per referral.\n\nWe also offer tiered bonuses — agencies that refer [N]+ bookings per quarter move to a [higher]% rate. And we provide co-branded marketing materials at no cost to help your team present it to clients."`,
+    script: `"Our partnership model is designed to scale with you and reward higher-value bookings.\n\nWe offer a tiered commission structure based on total monthly booking revenue you generate with us:\n• Up to $10K/month — 15% commission\n• Up to $15K/month — 20% commission\n• Up to $20K/month — 25% commission"`,
     notes: [
-      "Fill in actual numbers before calling",
-      "Tiered structure creates aspiration and long-term commitment",
-      "Co-branded materials = less work for them (SNAP: Simple)"
+      "Tiered structure by monthly revenue — not by number of bookings",
+      "Higher-end bookings move the needle faster — emphasize this with luxury-focused agencies",
+      "No ceiling mentioned — keeps the upside open"
     ],
     responses: [
       { label: "That's solid — what's next?", next: "qualification" },
@@ -246,7 +246,7 @@ const SCRIPT_DATA = {
     method: "Complete",
     title: "Meeting Booked — Call Complete",
     cogTip: "Log the call in CRM immediately. Take a 90-second micro-break before the next dial.",
-    script: `POST-CALL CHECKLIST:\n\n✓ Log call outcome in CRM (meeting booked)\n✓ Send calendar invite within 5 minutes\n✓ Attach one-pager PDF to the invite\n✓ Set follow-up reminder for 24hrs before the meeting\n✓ Note any personal details mentioned (kids, travel preferences, agency niche) for the onboarding call`,
+    script: `POST-CALL CHECKLIST:\n\n✓ Log call outcome in CRM (meeting booked)\n✓ Send calendar invite within 5 minutes\n✓ Attach location presentation to the invite\n✓ Set follow-up reminder for 24hrs before the meeting\n✓ Note any personal details mentioned (kids, travel preferences, agency niche) for the onboarding call`,
     notes: [
       "90-second rule: brief physical reset before next call",
       "Personal details = H2H ammunition for the onboarding meeting",
@@ -276,7 +276,7 @@ const SCRIPT_DATA = {
     method: "Challenger",
     title: '"Not Interested"',
     cogTip: "Don't argue. Reframe with a question. You have ONE shot to pivot.",
-    script: `"Totally fair — and I appreciate the honesty. Just out of curiosity: is that because you're already set with outdoor/glamping partners, or is it more that it's not a category your clients ask about?\n\n[If they have partners]: "Got it. We're not trying to replace anyone — some agencies use us as a complementary option for the Southeast specifically. Would it be worth a 2-minute overview just to have us in your back pocket?"\n\n[If not their category]: "That makes sense. What I've been hearing from other agencies is that clients are increasingly requesting nature-based getaways even from agencies that don't specialize in it. If that trend hits your desk, would you want to have a partner ready to go?"`,
+    script: `"Totally fair — and I appreciate the honesty. Just out of curiosity: is that because you're already working with outdoor/glamping partners, or more that it's not something your clients typically ask for?\n\n[If they have partners]:\n"Got it — that makes sense. We're not looking to replace anyone. Some agencies work with us as a complementary option specifically for Charlotte-accessible, South Carolina experiences, since that's where we're strongest. Would it be worth a quick 2-minute overview, just so you have us as an additional option when that kind of request comes up?"\n\n[If not their category]:\n"That makes sense. What we've been seeing, though, is that even agencies that don't focus on outdoor travel are getting more requests for nature-based, but still comfortable and accessible experiences — especially within driving distance of cities like Charlotte. If that starts coming up for your clients, would it be helpful to already have a vetted option you can confidently recommend?"`,
     notes: [
       "The diagnostic question reveals the REAL objection",
       "Challenger approach: offer an insight (market trend) to reframe",
@@ -314,12 +314,12 @@ const SCRIPT_DATA = {
     method: "H2H",
     title: '"Just Send Me an Email"',
     cogTip: "Don't fight it — but add a micro-commitment to keep the thread alive.",
-    script: `"Happy to — what's the best email? I'll send over a one-pager with commission details and property highlights.\n\nOne quick question so I can tailor it: do your clients tend more toward couples getaways, family trips, or corporate retreats? That way I'll include the most relevant properties.\n\n[After they answer]\n\nPerfect, I'll have that in your inbox within the hour. And I'll follow up [day] just to make sure it didn't land in spam — fair enough?"`,
+    script: `"Happy to — what's the best email to send it to? I'll share a brief presentation with commission details and an overview of the property.\n\n[After they answer]\n\nPerfect — I'll have that in your inbox within the hour. I'll also follow up on [day] just to make sure it came through — does that sound alright?"`,
     notes: [
       "Get their email = real contact captured",
-      "The 'tailor' question = micro-engagement + qualification data",
-      "Schedule the follow-up call ON THIS CALL — don't leave it open",
-      "Within the hour = urgency and professionalism"
+      "Schedule the follow-up ON THIS CALL — don't leave it open",
+      "Within the hour = urgency and professionalism",
+      "NOTE: ensure the location presentation is ready before using this script"
     ],
     responses: [
       { label: "Email sent + follow-up scheduled", next: "callback" },
@@ -333,12 +333,13 @@ const SCRIPT_DATA = {
     method: "Challenger",
     title: '"We Already Have Partners"',
     cogTip: "Don't compete — complement. Position as an addition, not a replacement.",
-    script: `"That's great — means your clients are already asking for this kind of experience, which is exactly our sweet spot. Most of our best agency partners actually work with multiple outdoor hospitality brands.\n\nThe question is really: does your current partner cover South Carolina and the Southeast specifically? Because that's where we're strongest, and having regional depth matters when clients ask for specifics.\n\nWould it make sense to have us as your Southeast option alongside what you're already doing?"`,
+    script: `"That's great — it means your clients are already looking for this type of experience, which aligns perfectly with what we offer. Many of our strongest agency partners work with multiple outdoor hospitality brands to ensure full regional coverage.\n\nThe key question is whether your current partner offers strong options within close proximity to Charlotte and the greater Southeast region. That's where we're particularly well positioned — being just about 90 minutes from Charlotte while still offering a true South Carolina nature experience.\n\nThat combination tends to resonate well with clients who want something unique, but still easily accessible. It could make sense to position us as your Charlotte-accessible, South Carolina option, complementing what you already offer rather than replacing it.\n\nWould it be worth exploring how we could fit into your portfolio in that way?"`,
     notes: [
-      "Validate their existing partnership (H2H: respect)",
-      "Challenger insight: regional specialization matters",
-      "'Alongside' framing removes threat of replacement",
-      "If they name the competitor — note it for market intel"
+      "Validate their existing partnership — don't challenge it",
+      "Challenger insight: Charlotte proximity is a specific regional gap most partners don't fill",
+      "'Complementing, not replacing' removes the threat",
+      "If they name the competitor — note it for market intel",
+      "Charlotte angle works best for Southeast-region agencies — adjust if calling nationally"
     ],
     responses: [
       { label: "We could use a SE option", next: "qualification" },
@@ -353,10 +354,10 @@ const SCRIPT_DATA = {
     method: "Challenger",
     title: '"Not Our Niche / We Don\'t Do Outdoor"',
     cogTip: "Challenger move: teach them something about their own market.",
-    script: `"That's actually what makes this interesting — a lot of agencies that don't specialize in outdoor are finding that clients bring it up anyway. The outdoor hospitality market hit $[X]B last year, and the fastest-growing segment is people who've never camped before but want a luxury nature experience.\n\nSo it's not really 'outdoor adventure' — it's more like boutique hospitality that happens to be in nature. Would it be worth seeing if it fits as a niche add-on for your existing clients?"`,
+    script: `"That's actually what makes this interesting — a lot of agencies that don't specialize in outdoor are finding that clients bring it up anyway. The outdoor hospitality market is a $3–4B industry and has been growing year over year — and the fastest-growing segment is people who've never camped before but want a luxury nature experience.\n\nSo it's not really 'outdoor adventure' — it's more like boutique hospitality that happens to be in nature. Would it be worth seeing if it fits as a niche add-on for your existing clients?"`,
     notes: [
       "Reframe: it's not camping, it's luxury hospitality in nature",
-      "Market data = credibility (have real numbers ready)",
+      "If you have verified market data, mention it — but only cite numbers you can source",
       "Challenger approach: give them an insight they didn't have",
       "'Niche add-on' = low commitment framing"
     ],
@@ -394,12 +395,12 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: '"Commission Is Too Low"',
     cogTip: "Anchor on total value, not just percentage. And mention the tiered upside.",
-    script: `"I hear you — commission percentage matters. Let me put it in context: our average booking is $[X] for a 2-night stay, so at [Y]% you're looking at $[Z] per referral with zero operational overhead on your end.\n\nAnd here's the upside: once you hit [N] referrals in a quarter, the rate jumps to [higher]%. Some of our top agency partners are earning $[annual amount] annually just from glamping referrals.\n\nWould it help to see the actual numbers in a simple one-pager?"`,
+    script: `"I completely understand — commission percentage is important, so let me put it into context.\n\nOur typical bookings range from approximately $910 for a 2-night cabin stay to $1,460 for a 2-night house stay. Based on our tiered structure, that translates to roughly $135–$365+ per booking, depending on volume and monthly performance — all with no operational overhead on your end.\n\nBecause our model is tied to total booking value rather than volume, higher-end and multi-unit bookings can significantly increase your effective earnings. As your monthly booking revenue grows, your commission scales accordingly — reaching up to 25%, which creates meaningful upside for agencies working with premium clients."`,
     notes: [
-      "Reframe from % to $ per referral — more tangible",
-      "Tiered structure = aspirational motivation",
-      "Zero overhead = pure profit framing",
-      "Offer the one-pager as a concrete next step"
+      "Anchor with real booking price ranges — $910 cabin, $1,460 house",
+      "Reframe from % to $ earned per referral — more tangible",
+      "Emphasize: higher-end clients = faster tier progression",
+      "25% ceiling is the aspirational hook — end on it"
     ],
     responses: [
       { label: "Send me the numbers", next: "obj_send_email" },
@@ -434,11 +435,11 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: "Referral Tracking System",
     cogTip: "Keep it simple — they don't want tech specs, they want confidence it works.",
-    script: `"We keep it simple: each agency gets a unique referral link and a partner dashboard where you can see bookings, commission earned, and payout status in real time. Your clients can also mention your agency name when booking directly, and we'll credit it to your account.\n\nPayouts go out [monthly] via [direct deposit / check]. No chasing invoices — it's all automated."`,
+    script: `"We've designed our tracking and payout process to be transparent and straightforward. Each partner agency is assigned a unique promo code, allowing us to accurately track all associated bookings and commissions. In cases where clients book directly, they can simply reference your agency, and we'll ensure the booking is attributed to your account.\n\nCommissions are consolidated and paid out on a monthly basis via bank transfer. The process is fully streamlined and automated, so your team doesn't need to manage invoicing or follow-ups."`,
     notes: [
-      "Two tracking methods = flexible, easy",
-      "Real-time dashboard = transparency = trust",
-      "Automated payouts = zero admin burden for them"
+      "Promo code = simple, memorable, easy for clients to pass along",
+      "Monthly bank transfer = predictable, professional",
+      "No invoicing = zero admin burden — lead with this"
     ],
     responses: [
       { label: "That works — let's move forward", next: "close" },
@@ -453,7 +454,7 @@ const SCRIPT_DATA = {
     method: "H2H",
     title: "Seasonality & Availability",
     cogTip: "Turn seasonality from a weakness into a selling point.",
-    script: `"Great question — we operate year-round, but the experience shifts with the seasons. Spring and fall are peak for couples and small groups. Summer is big for families. And winter — that's actually our hidden gem: lower rates, fire pit season, and that cozy cabin vibe that clients love.\n\nSo from a referral standpoint, there's always something to recommend regardless of when your client wants to travel."`,
+    script: `"Great question — we operate year-round, but the experience shifts with the seasons. Spring and fall are peak for couples and small groups. Summer is big for families. And winter — that's actually our hidden gem: fire pit season, sauna season, and that cozy cabin vibe that clients love. Also, as you know, the winters here in South Carolina are very mild!\n\nSo from a referral standpoint, there's always something to recommend regardless of when your client wants to travel."`,
     notes: [
       "Year-round = consistent referral opportunity",
       "Each season has a hook — give them selling points",
@@ -472,7 +473,7 @@ const SCRIPT_DATA = {
     method: "H2H",
     title: "Family-Friendly Options",
     cogTip: null,
-    script: `"Absolutely — we have several properties that are specifically set up for families. Kid-friendly activities like nature trails, s'mores kits, stargazing guides, and some sites even have creek access and outdoor games.\n\nThe parents get the luxury experience, and the kids get an adventure they'll talk about at school for weeks. It's one of our highest-rebooking segments, actually."`,
+    script: `"Absolutely — all our locations are specifically set up for families. Kid-friendly activities like nature trails, ebikes, swimming pool, table tennis, volleyball, fishing, kayaking, and more!\n\nThe parents get the luxury experience, and the kids get an adventure they'll talk about for weeks. It's one of our highest-rebooking segments, actually."`,
     notes: [
       "Paint the picture for the agent — they'll use these words with clients",
       "Rebooking stat = recurring commission opportunity for them"

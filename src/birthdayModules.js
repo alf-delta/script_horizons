@@ -180,7 +180,7 @@ export const BIRTHDAY_DATA = {
     method: "H2H",
     title: "Booking Confirmed",
     cogTip: "End on a high. This is a celebration — match the energy.",
-    script: `"Wonderful! I've got you down for [dates] at Sand Hills. You'll receive a confirmation to [email] shortly. We're so excited to have you celebrate your birthday with us at the new location — it's going to be special. If you have any questions before then, just reach out to us at gohorizons.us. Can't wait to see you there, [Name]!"`,
+    script: `"Wonderful! I've got you down for [dates] at Sand Hills. You'll receive a confirmation to [email] shortly. We're so excited to have you celebrate your birthday with us at the new location — it's going to be special. If you have any questions before then, just reach out to us at gohorizons.com. Can't wait to see you there, [Name]!"`,
     notes: [
       "Confirm booking in Cloudbeds immediately",
       "Send confirmation email same day",
@@ -199,7 +199,7 @@ export const BIRTHDAY_DATA = {
     method: "H2H",
     title: "Schedule a Callback",
     cogTip: "A specific time is 3x more likely to result in a real callback than 'I'll try again later'.",
-    script: `"No problem at all, [Name]. When would be a better time to reach you — would [day] work, maybe around [time]? I'll send you our website in the meantime so you can take a look: gohorizons.us."`,
+    script: `"No problem at all, [Name]. When would be a better time to reach you — would [day] work, maybe around [time]? I'll send you our website in the meantime so you can take a look: gohorizons.com."`,
     notes: [
       "Get a specific day and time — not 'sometime next week'",
       "Set reminder in CRM immediately",
@@ -224,7 +224,7 @@ export const BIRTHDAY_DATA = {
       "If 'maybe later' — set follow-up reminder for 7 days",
       "If booked — confirm in Cloudbeds + send confirmation email",
       "If no answer — try once more on a different day, then mark unreachable",
-      "Send website link: gohorizons.us",
+      "Send website link: gohorizons.com",
     ],
     responses: [
       { label: "Start new call", next: "bday_opening_birthday" },
@@ -258,7 +258,7 @@ export const BIRTHDAY_DATA = {
     method: "H2H",
     title: "Objection — Not Interested",
     cogTip: "Don't fight it. Leave the door open — they were a guest once, they might be again.",
-    script: `"No worries at all, [Name] — I completely understand. If you ever want to check out the new location, our website is gohorizons.us. It's worth a look when you have a moment. Hope you have a wonderful birthday this spring!"`,
+    script: `"No worries at all, [Name] — I completely understand. If you ever want to check out the new location, our website is gohorizons.com. It's worth a look when you have a moment. Hope you have a wonderful birthday this spring!"`,
     notes: [
       "No second attempt after a clear 'not interested'",
       "Warm, genuine close — they may come back on their own",
@@ -296,7 +296,7 @@ export const BIRTHDAY_DATA = {
     method: "H2H",
     title: "Objection — Already Have Birthday Plans",
     cogTip: "Don't push. Pivot to later in the year or leave a warm impression for next time.",
-    script: `"Oh that's great — happy early birthday! If anything changes or you're looking for a getaway later this year, keep us in mind. Sand Hills is going to be stunning in the summer too. I'll send you the link — gohorizons.us — just to have it."`,
+    script: `"Oh that's great — happy early birthday! If anything changes or you're looking for a getaway later this year, keep us in mind. Sand Hills is going to be stunning in the summer too. I'll send you the link — gohorizons.com — just to have it."`,
     notes: [
       "This is not a lost contact — they're a past guest with a future",
       "Log in CRM: has plans, follow up in 3 months",
@@ -335,7 +335,7 @@ export const BIRTHDAY_DATA = {
     method: "H2H",
     title: "Graceful Exit",
     cogTip: "Every call that ends well is a future booking. Leave them with warmth.",
-    script: `"Completely understood, [Name]. No pressure at all — I just wanted to make sure you knew about it. Our website is gohorizons.us if you ever feel like checking it out. Hope you have an amazing birthday this spring — take care!"`,
+    script: `"Completely understood, [Name]. No pressure at all — I just wanted to make sure you knew about it. Our website is gohorizons.com if you ever feel like checking it out. Hope you have an amazing birthday this spring — take care!"`,
     notes: [
       "Warm, genuine — no frustration in the voice",
       "Log in CRM: outcome, date, notes",
@@ -360,7 +360,7 @@ export const BIRTHDAY_DATA = {
       "Activities: On-site outdoor activities (details in Cloudbeds)",
       "Opening: April 2026",
       "Accommodates: Individuals, couples, small groups",
-      "Website: gohorizons.us",
+      "Website: gohorizons.com",
       "Bookings: Via Cloudbeds — check availability in real time",
     ],
     responses: [

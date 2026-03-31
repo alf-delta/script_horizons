@@ -189,7 +189,7 @@ export const SPANISH_BIRTHDAY_DATA = {
     method: "H2H",
     title: "Reserva Confirmada",
     cogTip: "Termina en alto. Esto es una celebración — iguala la energía.",
-    script: `"¡Maravilloso! Le tengo apartado para [fechas] en Sand Hills. Va a recibir una confirmación a [correo] en breve. Estamos muy emocionados de que celebre su cumpleaños con nosotros en la nueva ubicación — va a ser algo especial. Si tiene alguna pregunta antes de eso, contáctenos en gohorizons.us. ¡No vemos la hora de verle ahí, [Nombre]!"`,
+    script: `"¡Maravilloso! Le tengo apartado para [fechas] en Sand Hills. Va a recibir una confirmación a [correo] en breve. Estamos muy emocionados de que celebre su cumpleaños con nosotros en la nueva ubicación — va a ser algo especial. Si tiene alguna pregunta antes de eso, contáctenos en gohorizons.com. ¡No vemos la hora de verle ahí, [Nombre]!"`,
     notes: [
       "Confirma la reserva en Cloudbeds inmediatamente",
       "Envía correo de confirmación el mismo día",
@@ -208,7 +208,7 @@ export const SPANISH_BIRTHDAY_DATA = {
     method: "H2H",
     title: "Programar Callback",
     cogTip: "Una hora específica tiene 3 veces más probabilidad de resultar en un callback real que un 'lo intento después'.",
-    script: `"No hay problema, [Nombre]. ¿Cuándo le quedaría mejor para hablar — le funcionaría el [día], como a las [hora]? Mientras tanto le envío nuestro sitio web para que le eche un vistazo: gohorizons.us."`,
+    script: `"No hay problema, [Nombre]. ¿Cuándo le quedaría mejor para hablar — le funcionaría el [día], como a las [hora]? Mientras tanto le envío nuestro sitio web para que le eche un vistazo: gohorizons.com."`,
     notes: [
       "Obtén un día y hora específicos — no 'algún día de la próxima semana'",
       "Programa recordatorio en CRM inmediatamente",
@@ -233,7 +233,7 @@ export const SPANISH_BIRTHDAY_DATA = {
       "Si 'quizás después' — programar seguimiento para 7 días",
       "Si reservó — confirmar en Cloudbeds + enviar correo de confirmación",
       "Si no contestó — intentar una vez más otro día, luego marcar como no localizado",
-      "Enviar enlace del sitio web: gohorizons.us",
+      "Enviar enlace del sitio web: gohorizons.com",
     ],
     responses: [
       { label: "Iniciar nueva llamada", next: "bday_opening_birthday" },
@@ -268,7 +268,7 @@ export const SPANISH_BIRTHDAY_DATA = {
     method: "H2H",
     title: "Objeción — No Me Interesa",
     cogTip: "No pelees. Deja la puerta abierta — fueron huéspedes una vez, pueden serlo de nuevo.",
-    script: `"No se preocupe para nada, [Nombre] — lo entiendo completamente. Si alguna vez quiere conocer la nueva ubicación, nuestro sitio web es gohorizons.us. Vale la pena echarle un vistazo cuando tenga un momento. ¡Que tenga un cumpleaños maravilloso esta primavera!"`,
+    script: `"No se preocupe para nada, [Nombre] — lo entiendo completamente. Si alguna vez quiere conocer la nueva ubicación, nuestro sitio web es gohorizons.com. Vale la pena echarle un vistazo cuando tenga un momento. ¡Que tenga un cumpleaños maravilloso esta primavera!"`,
     notes: [
       "No hay segundo intento después de un 'no me interesa' claro",
       "Cierre cálido y genuino — pueden volver por su cuenta",
@@ -308,7 +308,7 @@ export const SPANISH_BIRTHDAY_DATA = {
     method: "H2H",
     title: "Objeción — Ya Tengo Planes de Cumpleaños",
     cogTip: "No insistas. Pivotea a más adelante en el año o deja una buena impresión para la próxima vez.",
-    script: `"¡Qué bueno! ¡Feliz cumpleaños adelantado! Si algo cambia o busca una escapada más adelante este año, ténganos en cuenta. Sand Hills va a estar espectacular en el verano también. Le dejo el enlace — gohorizons.us — solo para que lo tenga."`,
+    script: `"¡Qué bueno! ¡Feliz cumpleaños adelantado! Si algo cambia o busca una escapada más adelante este año, ténganos en cuenta. Sand Hills va a estar espectacular en el verano también. Le dejo el enlace — gohorizons.com — solo para que lo tenga."`,
     notes: [
       "Este no es un contacto perdido — son un huésped anterior con futuro",
       "Registrar en CRM: tiene planes, seguimiento en 3 meses",
@@ -349,7 +349,7 @@ export const SPANISH_BIRTHDAY_DATA = {
     method: "H2H",
     title: "Salida Elegante",
     cogTip: "Cada llamada que termina bien es una reserva futura. Déjalos con calidez.",
-    script: `"Entendido completamente, [Nombre]. Sin presión — solo quería asegurarme de que supiera de esto. Nuestro sitio web es gohorizons.us si alguna vez quiere echarle un vistazo. ¡Que tenga un cumpleaños increíble esta primavera — cuídese mucho!"`,
+    script: `"Entendido completamente, [Nombre]. Sin presión — solo quería asegurarme de que supiera de esto. Nuestro sitio web es gohorizons.com si alguna vez quiere echarle un vistazo. ¡Que tenga un cumpleaños increíble esta primavera — cuídese mucho!"`,
     notes: [
       "Cálido, genuino — sin frustración en la voz",
       "Registrar en CRM: resultado, fecha, notas",
@@ -375,7 +375,7 @@ export const SPANISH_BIRTHDAY_DATA = {
       "Actividades: Actividades al aire libre en sitio (detalles en Cloudbeds)",
       "Apertura: Abril 2026",
       "Capacidad: Individuales, parejas, grupos pequeños",
-      "Sitio web: gohorizons.us",
+      "Sitio web: gohorizons.com",
       "Reservas: Vía Cloudbeds — revisar disponibilidad en tiempo real",
     ],
     responses: [

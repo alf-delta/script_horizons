@@ -105,7 +105,7 @@ export const SPANISH_DATA = {
     method: "SNAP",
     title: "Establecer Credibilidad",
     cogTip: "Regla de Tres: quiénes somos, qué hacemos, una prueba concreta.",
-    script: `"Excelente pregunta — Horizons Getaways es una marca de glamping y hospitalidad al aire libre con base en South Carolina. Operamos retiros de naturaleza premium y trabajamos con agencias de viaje para ofrecer a sus clientes experiencias únicas. Las agencias que trabajan con nosotros típicamente reciben un [X]% de comisión por cada reserva que nos refieren. ¿Le parece que valdría la pena una conversación rápida sobre esto?"`,
+    script: `"Excelente pregunta — Horizons Getaways es una marca de glamping y hospitalidad al aire libre con base en South Carolina. Operamos retiros de naturaleza premium y trabajamos con agencias de viaje para ofrecer a sus clientes experiencias únicas. Las agencias que trabajan con nosotros ganan una comisión escalonada por cada reserva que nos refieren — comenzando desde el 15%. ¿Le parece que valdría la pena una conversación rápida sobre esto?"`,
     notes: [
       "Tres tiempos: quiénes somos → qué hacemos → beneficio concreto",
       "Anclar con el % de comisión lo hace tangible de inmediato",
@@ -126,7 +126,7 @@ export const SPANISH_DATA = {
     method: "SNAP",
     title: "Propuesta de Valor — Alianza",
     cogTip: "Problema → Impacto → Solución. Máximo tres oraciones antes de hacer una pregunta.",
-    script: `"Le cuento brevemente: el turismo de naturaleza y glamping ha crecido más del 40% desde 2020, y muchas agencias nos dicen que sus clientes les piden cada vez más experiencias únicas al aire libre, pero no tienen un socio confiable para ofrecerlas.\n\nAhí es donde entramos nosotros. Horizons Getaways se encarga de todo — la propiedad, la experiencia, el servicio al huésped — y su agencia gana una comisión por cada referido. Cero riesgo de inventario, cero logística de su parte."`,
+    script: `"Le cuento brevemente: el turismo de naturaleza y glamping ha sido uno de los segmentos de mayor crecimiento en hospitalidad, y muchas agencias nos dicen que sus clientes les piden cada vez más experiencias únicas al aire libre, pero no tienen un socio confiable para ofrecerlas.\n\nAhí es donde entramos nosotros. Horizons Getaways se encarga de todo — la propiedad, la experiencia, el servicio al huésped — y su agencia gana una comisión por cada referido. Cero riesgo de inventario, cero logística de su parte."`,
     notes: [
       "Empieza con la tendencia del mercado (validación externa)",
       "Enmarca el problema que ELLOS enfrentan (demanda sin oferta)",
@@ -148,12 +148,11 @@ export const SPANISH_DATA = {
     method: "SNAP",
     title: "Comisión y Economía",
     cogTip: "Sé específico con los números. Lo vago genera desconfianza.",
-    script: `"Nuestra comisión estándar para socios es del [X]% por reserva, y se paga [mensualmente / por reserva]. El valor promedio de una reserva está entre $[Y] y $[Z] por noche, así que para una estadía típica de 2 noches, estamos hablando de $[monto] por cada referido.\n\nAdemás, tenemos bonos escalonados — las agencias que refieren [N]+ reservas por trimestre pasan a una tasa del [más alto]%. Y les proporcionamos materiales de marketing co-branded sin costo para que su equipo pueda presentarlo a los clientes."`,
+    script: `"Nuestro modelo de alianza está diseñado para crecer con usted y premiar las reservas de mayor valor.\n\nOfrecemos una estructura de comisión escalonada basada en el ingreso total mensual de reservas que genera con nosotros:\n• Hasta $10K/mes — 15% de comisión\n• Hasta $15K/mes — 20% de comisión\n• Hasta $20K/mes — 25% de comisión"`,
     notes: [
-      "Llena los números reales antes de llamar",
-      "La estructura escalonada crea aspiración y compromiso a largo plazo",
-      "Materiales co-branded = menos trabajo para ellos",
-      "Con hispanos, enfatiza la palabra 'sin costo' — elimina fricción"
+      "Estructura escalonada por ingreso mensual — no por número de reservas",
+      "Reservas de mayor valor avanzan más rápido en el tier — enfatízalo con agencias de perfil premium",
+      "No se menciona techo — mantiene el potencial de crecimiento abierto"
     ],
     responses: [
       { label: "Eso está bien — ¿qué sigue?", next: "qualification" },
@@ -291,7 +290,7 @@ export const SPANISH_DATA = {
     method: "Challenger",
     title: '"No me interesa"',
     cogTip: "No discutas. Reenmarca con una pregunta. Tienes UNA oportunidad para pivotar.",
-    script: `"Totalmente entendido — y le agradezco la honestidad. Solo por curiosidad: ¿es porque ya tienen cubierto el tema de glamping/turismo al aire libre, o es más que no es una categoría que sus clientes les piden?\n\n[Si ya tienen socios]: "Entiendo. No buscamos reemplazar a nadie — algunas agencias nos usan como opción complementaria específicamente para el sureste. ¿Valdría la pena un resumen de 2 minutos solo para tenerlo como alternativa?"\n\n[Si no es su categoría]: "Tiene sentido. Lo que hemos escuchado de otras agencias es que los clientes están pidiendo cada vez más escapadas en la naturaleza, incluso a agencias que no se especializan en eso. Si esa tendencia toca su puerta, ¿le gustaría tener un socio listo para responder?"`,
+    script: `"Totalmente entendido — y le agradezco la honestidad. Solo por curiosidad: ¿es porque ya trabajan con socios de glamping/turismo al aire libre, o más bien porque no es algo que sus clientes suelen pedir?\n\n[Si ya tienen socios]:\n"Entiendo — tiene sentido. No buscamos reemplazar a nadie. Algunas agencias trabajan con nosotros como opción complementaria específicamente para experiencias accesibles desde Charlotte, en South Carolina, que es donde somos más fuertes. ¿Valdría la pena un resumen rápido de 2 minutos, solo para tenernos como alternativa cuando surja ese tipo de solicitud?"\n\n[Si no es su categoría]:\n"Tiene sentido. Lo que hemos visto, sin embargo, es que incluso agencias que no se enfocan en turismo al aire libre están recibiendo más solicitudes de experiencias en la naturaleza — cómodas y accesibles, especialmente dentro de distancia en auto desde ciudades como Charlotte. Si eso empieza a surgir con sus clientes, ¿le sería útil tener ya una opción verificada que pueda recomendar con confianza?"`,
     notes: [
       "La pregunta diagnóstica revela la objeción REAL",
       "Enfoque Challenger: ofrece un insight (tendencia del mercado) para reencuadrar",
@@ -333,13 +332,13 @@ export const SPANISH_DATA = {
     method: "H2H",
     title: '"Mándeme un correo"',
     cogTip: "No lo pelees — pero agrega un micro-compromiso para mantener el hilo vivo.",
-    script: `"Con mucho gusto — ¿cuál es su mejor correo? Le envío un resumen de una página con los detalles de comisión y las propiedades destacadas.\n\nUna pregunta rápida para personalizarlo: ¿sus clientes tienden más a escapadas de pareja, viajes familiares o retiros corporativos? Así le incluyo las propiedades más relevantes.\n\n[Después de que respondan]\n\nPerfecto, lo tiene en su bandeja dentro de la hora. Y le doy seguimiento el [día] solo para asegurarme de que no cayó en spam — ¿le parece?"`,
+    script: `"Con mucho gusto — ¿a qué correo se lo envío? Le comparto una breve presentación con los detalles de comisión y una descripción general de la propiedad.\n\n[Después de que respondan]\n\nPerfecto — lo tiene en su bandeja dentro de la hora. También le doy seguimiento el [día] para asegurarme de que llegó bien — ¿le parece bien?"`,
     notes: [
       "Obtener su correo = contacto real capturado",
-      "La pregunta de 'personalizar' = micro-engagement + datos de calificación",
       "Agenda la llamada de seguimiento EN ESTA LLAMADA — no lo dejes abierto",
       "'Dentro de la hora' = urgencia y profesionalismo",
-      "'Con mucho gusto' suena natural y servicial en español — úsalo"
+      "'Con mucho gusto' suena natural y servicial en español — úsalo",
+      "NOTA: asegúrate de que la presentación de la ubicación esté lista antes de usar este guión"
     ],
     responses: [
       { label: "Correo enviado + seguimiento agendado", next: "callback" },
@@ -354,12 +353,13 @@ export const SPANISH_DATA = {
     method: "Challenger",
     title: '"Ya tenemos socios"',
     cogTip: "No compitas — complementa. Posiciónate como adición, no reemplazo.",
-    script: `"Qué bueno — eso significa que sus clientes ya piden este tipo de experiencias, y eso es exactamente nuestro fuerte. La mayoría de nuestras mejores agencias socias trabajan con varias marcas de hospitalidad al aire libre.\n\nLa pregunta es: ¿su socio actual cubre South Carolina y el sureste específicamente? Porque ahí es donde somos más fuertes, y tener profundidad regional importa cuando los clientes preguntan por detalles.\n\n¿Tendría sentido tenernos como su opción para el sureste, complementando lo que ya tienen?"`,
+    script: `"Qué bueno — eso significa que sus clientes ya buscan este tipo de experiencias, lo cual se alinea perfectamente con lo que ofrecemos. Muchas de nuestras agencias socias más fuertes trabajan con varias marcas de hospitalidad al aire libre para garantizar cobertura regional completa.\n\nLa pregunta clave es si su socio actual ofrece buenas opciones cerca de Charlotte y el sureste en general. Ahí es donde estamos especialmente bien posicionados — a tan solo 90 minutos de Charlotte, ofreciendo una experiencia auténtica de South Carolina en la naturaleza.\n\nEsa combinación suele resonar bien con clientes que buscan algo único pero de fácil acceso. Podría tener sentido posicionarnos como su opción accesible desde Charlotte, en South Carolina, complementando lo que ya ofrecen en lugar de reemplazarlo.\n\n¿Valdría la pena explorar cómo podríamos encajar en su portafolio de esa manera?"`,
     notes: [
-      "Valida su alianza existente (H2H: respeto)",
-      "Insight Challenger: la especialización regional importa",
-      "'Complementando' elimina la amenaza de reemplazo",
-      "Con hispanos, 'qué bueno' es validación genuina — no suena sarcástico como podría en inglés"
+      "Valida su alianza existente — no la cuestiones",
+      "Insight Challenger: la proximidad a Charlotte es una brecha regional específica que la mayoría no cubre",
+      "'Complementando, no reemplazando' elimina la amenaza",
+      "Si mencionan al competidor — anótalo para inteligencia de mercado",
+      "El ángulo de Charlotte funciona mejor con agencias del sureste — ajusta si llamas a nivel nacional"
     ],
     responses: [
       { label: "Nos vendría bien una opción para el sureste", next: "qualification" },
@@ -375,10 +375,10 @@ export const SPANISH_DATA = {
     method: "Challenger",
     title: '"No es nuestro nicho / No manejamos outdoor"',
     cogTip: "Movimiento Challenger: enséñales algo sobre su propio mercado.",
-    script: `"Justamente eso es lo que lo hace interesante — muchas agencias que no se especializan en outdoor están descubriendo que sus clientes lo piden de todas formas. El mercado de hospitalidad al aire libre alcanzó los $[X]B el año pasado, y el segmento que más crece es gente que nunca ha acampado pero quiere una experiencia de naturaleza de lujo.\n\nEntonces no es realmente 'aventura al aire libre' — es más como hospitalidad boutique que sucede en la naturaleza. ¿Valdría la pena ver si funciona como complemento para sus clientes actuales?"`,
+    script: `"Justamente eso es lo que lo hace interesante — muchas agencias que no se especializan en outdoor están descubriendo que sus clientes lo piden de todas formas. El mercado de hospitalidad al aire libre es una industria de $3–4B que ha crecido año tras año — y el segmento que más crece es gente que nunca ha acampado pero quiere una experiencia de naturaleza de lujo.\n\nEntonces no es realmente 'aventura al aire libre' — es más como hospitalidad boutique que sucede en la naturaleza. ¿Valdría la pena ver si funciona como complemento para sus clientes actuales?"`,
     notes: [
       "Reencuadra: no es camping, es hospitalidad de lujo en la naturaleza",
-      "Datos del mercado = credibilidad (ten números reales listos)",
+      "Si tienes datos de mercado verificados, menciónalos — pero solo cita números que puedas respaldar",
       "Enfoque Challenger: dales un insight que no tenían",
       "'Complemento' = bajo compromiso",
       "Para hispanos, 'justamente' refuerza que entiendes su perspectiva"
@@ -420,13 +420,12 @@ export const SPANISH_DATA = {
     method: "SNAP",
     title: '"La comisión es muy baja"',
     cogTip: "Ancla en el valor total, no solo en el porcentaje. Y menciona el escalón superior.",
-    script: `"Lo entiendo — el porcentaje de comisión importa. Déjeme ponerlo en contexto: nuestra reserva promedio es de $[X] por una estadía de 2 noches, así que al [Y]% estamos hablando de $[Z] por referido, sin ningún costo operativo de su parte.\n\nY aquí viene lo bueno: una vez que llegan a [N] referidos en un trimestre, la tasa sube al [más alto]%. Algunos de nuestros mejores socios de agencias están generando $[monto anual] al año solo con referidos de glamping.\n\n¿Le ayudaría ver los números concretos en un resumen de una página?"`,
+    script: `"Lo entiendo completamente — el porcentaje de comisión es importante, así que déjeme ponerlo en contexto.\n\nNuestras reservas típicas van desde aproximadamente $910 por una estadía de 2 noches en cabaña hasta $1,460 por una estadía de 2 noches en casa. Según nuestra estructura escalonada, eso se traduce en aproximadamente $135–$365+ por reserva, según el volumen y el rendimiento mensual — todo sin costo operativo de su parte.\n\nPuesto que nuestro modelo está vinculado al valor total de reservas y no al volumen, las reservas de mayor valor y las de múltiples unidades pueden aumentar significativamente sus ganancias. A medida que crece su ingreso mensual de reservas, su comisión escala en consecuencia — llegando hasta el 25%, lo que representa un potencial real para agencias que trabajan con clientes premium."`,
     notes: [
-      "Reencuadra de % a $ por referido — más tangible",
-      "Estructura escalonada = motivación aspiracional",
-      "Cero gastos operativos = ganancia pura",
-      "Ofrece el resumen como próximo paso concreto",
-      "Para hispanos, 'aquí viene lo bueno' crea anticipación natural"
+      "Ancla con rangos de precio reales — $910 cabaña, $1,460 casa",
+      "Reencuadra de % a $ ganados por referido — más tangible",
+      "Énfasis: clientes de mayor valor = progresión más rápida en el tier",
+      "El 25% es el gancho aspiracional — termina con él"
     ],
     responses: [
       { label: "Mándeme los números", next: "obj_send_email" },
@@ -464,12 +463,12 @@ export const SPANISH_DATA = {
     method: "SNAP",
     title: "Sistema de Rastreo de Referidos",
     cogTip: "Mantenlo simple — no quieren especificaciones técnicas, quieren confianza de que funciona.",
-    script: `"Lo mantenemos sencillo: cada agencia recibe un enlace de referido único y un panel de socios donde pueden ver las reservas, la comisión ganada y el estado de pago en tiempo real. Sus clientes también pueden mencionar el nombre de su agencia al reservar directamente, y lo acreditamos a su cuenta.\n\nLos pagos se procesan [mensualmente] vía [depósito directo / cheque]. Sin perseguir facturas — todo es automático."`,
+    script: `"Hemos diseñado nuestro proceso de rastreo y pagos para que sea transparente y sencillo. A cada agencia socia se le asigna un código promocional único, lo que nos permite rastrear con precisión todas las reservas y comisiones asociadas. En los casos en que los clientes reserven directamente, pueden simplemente mencionar su agencia, y nos aseguraremos de que la reserva quede acreditada a su cuenta.\n\nLas comisiones se consolidan y se pagan mensualmente vía transferencia bancaria. El proceso está completamente automatizado, por lo que su equipo no necesita gestionar facturas ni hacer seguimientos."`,
     notes: [
-      "Dos métodos de rastreo = flexible, fácil",
-      "Panel en tiempo real = transparencia = confianza",
-      "Pagos automáticos = cero carga administrativa para ellos",
-      "Para hispanos, 'sin perseguir facturas' resuelve un dolor real — úsalo con énfasis"
+      "Código promocional = simple, memorable, fácil de compartir con los clientes",
+      "Transferencia bancaria mensual = predecible, profesional",
+      "Sin facturas = cero carga administrativa — empieza con esto",
+      "Para hispanos, 'completamente automatizado' elimina el miedo al papeleo"
     ],
     responses: [
       { label: "Eso funciona — avancemos", next: "close" },
@@ -485,7 +484,7 @@ export const SPANISH_DATA = {
     method: "H2H",
     title: "Temporalidad y Disponibilidad",
     cogTip: "Convierte la temporalidad de debilidad en punto de venta.",
-    script: `"Excelente pregunta — operamos todo el año, pero la experiencia cambia con las estaciones. Primavera y otoño son los picos para parejas y grupos pequeños. El verano es fuerte para familias. Y el invierno — ese es nuestro secreto mejor guardado: tarifas más bajas, temporada de fogatas, y esa vibra acogedora de cabaña que a los clientes les encanta.\n\nEntonces, desde el punto de vista de referidos, siempre hay algo que recomendar sin importar cuándo quiera viajar su cliente."`,
+    script: `"Excelente pregunta — operamos todo el año, pero la experiencia cambia con las estaciones. Primavera y otoño son los picos para parejas y grupos pequeños. El verano es fuerte para familias. Y el invierno — ese es nuestro secreto mejor guardado: temporada de fogatas, temporada de sauna, y esa vibra acogedora de cabaña que a los clientes les encanta. ¡Además, como usted sabe, los inviernos aquí en South Carolina son muy suaves!\n\nEntonces, desde el punto de vista de referidos, siempre hay algo que recomendar sin importar cuándo quiera viajar su cliente."`,
     notes: [
       "Todo el año = oportunidad constante de referidos",
       "Cada temporada tiene un gancho — dales puntos de venta",
@@ -506,7 +505,7 @@ export const SPANISH_DATA = {
     method: "H2H",
     title: "Opciones para Familias",
     cogTip: null,
-    script: `"Por supuesto — tenemos varias propiedades diseñadas específicamente para familias. Actividades para niños como senderos naturales, kits para hacer s'mores, guías de observación de estrellas, y algunos sitios incluso tienen acceso a arroyos y juegos al aire libre.\n\nLos padres obtienen la experiencia de lujo, y los niños viven una aventura de la que van a hablar en la escuela por semanas. De hecho, es uno de nuestros segmentos con más rebookings."`,
+    script: `"Por supuesto — todas nuestras ubicaciones están diseñadas específicamente para familias. Actividades para niños como senderos naturales, bicicletas eléctricas, piscina, tenis de mesa, voleibol, pesca, kayak, ¡y mucho más!\n\nLos padres obtienen la experiencia de lujo, y los niños viven una aventura de la que van a hablar por semanas. De hecho, es uno de nuestros segmentos con más rebookings."`,
     notes: [
       "Pinta la imagen para el agente — ellos van a usar estas palabras con sus clientes",
       "El dato de rebooking = oportunidad de comisión recurrente para ellos",
