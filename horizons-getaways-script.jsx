@@ -3,6 +3,8 @@ import { supabase } from "./src/supabase";
 import { BIRTHDAY_DATA, BIRTHDAY_TOPIC_GROUPS, BIRTHDAY_STAGE_ACCENT } from "./src/birthdayModules";
 import { SPANISH_DATA, SPANISH_TOPIC_GROUPS } from "./src/spanishModules";
 import { SPANISH_BIRTHDAY_DATA, SPANISH_BIRTHDAY_TOPIC_GROUPS } from "./src/spanishBirthdayModules";
+import { INBOUND_DATA, INBOUND_TOPIC_GROUPS, INBOUND_STAGE_ACCENT } from "./src/inboundModules";
+import { SPANISH_INBOUND_DATA, SPANISH_INBOUND_TOPIC_GROUPS } from "./src/spanishInboundModules";
 
 /* ─────────────────────────────────────────────
    HORIZONS GETAWAYS — B2B COLD OUTBOUND SCRIPT
@@ -549,9 +551,10 @@ const BRICK = "#B34233";
 const START_MODULE = {
   b2b: "gatekeeper",
   birthday: "bday_opening_birthday",
+  inbound: "inbound_opening",
 };
 
-const ALL_DATA = { ...SCRIPT_DATA, ...BIRTHDAY_DATA };
+const ALL_DATA = { ...SCRIPT_DATA, ...BIRTHDAY_DATA, ...INBOUND_DATA };
 
 export default function HorizonsScript({ session }) {
   const userId = session?.user?.id;
@@ -564,16 +567,19 @@ export default function HorizonsScript({ session }) {
   const [userNotes, setUserNotes] = useState({});
   const [noteInput, setNoteInput] = useState("");
 
-  const activeData = scriptMode === "birthday"
-    ? (scriptLang === "es" ? SPANISH_BIRTHDAY_DATA : BIRTHDAY_DATA)
-    : (scriptLang === "es" ? SPANISH_DATA : SCRIPT_DATA);
-  const activeGroups = scriptMode === "birthday"
-    ? (scriptLang === "es" ? SPANISH_BIRTHDAY_TOPIC_GROUPS : BIRTHDAY_TOPIC_GROUPS)
-    : (scriptLang === "es" ? SPANISH_TOPIC_GROUPS : TOPIC_GROUPS);
+  const activeData =
+    scriptMode === "birthday" ? (scriptLang === "es" ? SPANISH_BIRTHDAY_DATA : BIRTHDAY_DATA) :
+    scriptMode === "inbound"  ? (scriptLang === "es" ? SPANISH_INBOUND_DATA : INBOUND_DATA) :
+    (scriptLang === "es" ? SPANISH_DATA : SCRIPT_DATA);
+  const activeGroups =
+    scriptMode === "birthday" ? (scriptLang === "es" ? SPANISH_BIRTHDAY_TOPIC_GROUPS : BIRTHDAY_TOPIC_GROUPS) :
+    scriptMode === "inbound"  ? (scriptLang === "es" ? SPANISH_INBOUND_TOPIC_GROUPS : INBOUND_TOPIC_GROUPS) :
+    (scriptLang === "es" ? SPANISH_TOPIC_GROUPS : TOPIC_GROUPS);
   const node = activeData[currentId] || ALL_DATA[currentId];
 
   const getStageColor = useCallback((stage) => {
     if (scriptMode === "birthday") return BIRTHDAY_STAGE_ACCENT[stage] || "#6B7280";
+    if (scriptMode === "inbound")  return INBOUND_STAGE_ACCENT[stage] || "#6B7280";
     return STAGE_ACCENT[stage] || "#6B7280";
   }, [scriptMode]);
 
@@ -692,6 +698,7 @@ export default function HorizonsScript({ session }) {
               {[
                 { key: "b2b", label: "B2B Agency" },
                 { key: "birthday", label: "Birthday Outreach" },
+                { key: "inbound", label: "Inbound Leads" },
               ].map(({ key, label }) => (
                 <button
                   key={key}
