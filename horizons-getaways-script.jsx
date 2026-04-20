@@ -561,6 +561,7 @@ export default function HorizonsScript({ session }) {
   const userEmail = session?.user?.email;
 
   const [scriptMode, setScriptMode] = useState("b2b");
+  const [archiveOpen, setArchiveOpen] = useState(false);
   const [scriptLang, setScriptLang] = useState("en");
   const [currentId, setCurrentId] = useState("opening");
   const [recentIds, setRecentIds] = useState(["opening"]);
@@ -691,31 +692,85 @@ export default function HorizonsScript({ session }) {
             <div>
               <img src="/logo.png" alt="Horizons Getaways" style={{ height: "96px", display: "block" }} />
             </div>
-            <div style={{
-              display: "flex", gap: "4px",
-              background: "#E8E4E1", borderRadius: "10px", padding: "4px"
-            }}>
-              {[
-                { key: "b2b", label: "B2B Agency" },
-                { key: "birthday", label: "Birthday Outreach" },
-                { key: "inbound", label: "Inbound Leads" },
-              ].map(({ key, label }) => (
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <div style={{
+                display: "flex", gap: "4px",
+                background: "#E8E4E1", borderRadius: "10px", padding: "4px"
+              }}>
+                {[
+                  { key: "b2b", label: "B2B Agency" },
+                  { key: "inbound", label: "Inbound Leads" },
+                ].map(({ key, label }) => (
+                  <button
+                    key={key}
+                    onClick={() => { handleModeSwitch(key); setArchiveOpen(false); }}
+                    style={{
+                      padding: "8px 20px", borderRadius: "8px",
+                      border: "none", cursor: "pointer",
+                      fontSize: "14px", fontWeight: 600,
+                      background: scriptMode === key ? "#FFFFFF" : "transparent",
+                      color: scriptMode === key ? "#1F2937" : "#6B7280",
+                      boxShadow: scriptMode === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
+                      transition: "all 0.15s ease",
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <div style={{ position: "relative" }}>
                 <button
-                  key={key}
-                  onClick={() => handleModeSwitch(key)}
+                  onClick={() => setArchiveOpen(v => !v)}
                   style={{
-                    padding: "8px 20px", borderRadius: "8px",
-                    border: "none", cursor: "pointer",
-                    fontSize: "14px", fontWeight: 600,
-                    background: scriptMode === key ? "#FFFFFF" : "transparent",
-                    color: scriptMode === key ? "#1F2937" : "#6B7280",
-                    boxShadow: scriptMode === key ? "0 1px 3px rgba(0,0,0,0.12)" : "none",
+                    padding: "8px 14px", borderRadius: "8px",
+                    border: "1px solid #E0DCDA", cursor: "pointer",
+                    fontSize: "13px", fontWeight: 500,
+                    background: ["birthday"].includes(scriptMode) ? "#F5F1ED" : "#FAFAF9",
+                    color: ["birthday"].includes(scriptMode) ? "#B34233" : "#9CA3AF",
                     transition: "all 0.15s ease",
                   }}
                 >
-                  {label}
+                  Archive {archiveOpen ? "▴" : "▾"}
                 </button>
-              ))}
+                {archiveOpen && (
+                  <div style={{
+                    position: "absolute", top: "calc(100% + 6px)", left: 0,
+                    background: "#FFFFFF", border: "1px solid #E0DCDA",
+                    borderRadius: "10px", padding: "4px",
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+                    zIndex: 100, minWidth: "180px",
+                    display: "flex", flexDirection: "column", gap: "2px"
+                  }}>
+                    <div style={{
+                      fontSize: "10px", fontWeight: 700, color: "#A8A09A",
+                      textTransform: "uppercase", letterSpacing: "0.08em",
+                      padding: "6px 12px 4px"
+                    }}>
+                      Archived Modes
+                    </div>
+                    {[
+                      { key: "birthday", label: "Birthday Outreach" },
+                    ].map(({ key, label }) => (
+                      <button
+                        key={key}
+                        onClick={() => { handleModeSwitch(key); setArchiveOpen(false); }}
+                        style={{
+                          padding: "8px 12px", borderRadius: "7px",
+                          border: "none", cursor: "pointer",
+                          fontSize: "13px", fontWeight: scriptMode === key ? 600 : 400,
+                          background: scriptMode === key ? "#FDF2F0" : "transparent",
+                          color: scriptMode === key ? "#B34233" : "#6B7280",
+                          textAlign: "left", transition: "all 0.12s ease",
+                        }}
+                        onMouseOver={e => { if (scriptMode !== key) e.currentTarget.style.background = "#F9F8F6"; }}
+                        onMouseOut={e => { if (scriptMode !== key) e.currentTarget.style.background = "transparent"; }}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
             <div style={{
                 display: "flex", gap: "3px",
