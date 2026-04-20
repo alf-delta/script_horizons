@@ -251,7 +251,7 @@ export const INBOUND_DATA = {
     method: "H2H",
     title: "Objection — Bugs / Wildlife Concern",
     cogTip: "Take it seriously — don't dismiss it. Acknowledge, then reframe with specifics.",
-    script: `"Totally fair — and I won't pretend there are zero bugs in South Carolina, because that would be a lie.\n\nHere's the reality though: you're in a solid structure with screens and doors. You're not in a tent. The property is well-maintained and guests aren't reporting anything alarming. It's more like sitting on a screened-in porch than being out in the woods.\n\nAnd honestly, beach towns aren't exactly bug-free either — mosquitoes love waterfront areas just as much as anywhere else.\n\nIs that a dealbreaker for you, or more of a 'good to know' thing?"`,
+    script: `"Totally fair — and I won't pretend there are zero bugs in South Carolina, because that would be a lie.\n\nHere's the reality though: you're in a solid structure with screens and doors. You're not in a tent. The property is well-maintained and guests aren't reporting anything alarming. It's more like sitting on a screened-in porch than being out in the woods.\n\nWe also use firewood treated with a natural bio-insecticide — so when you've got a fire going, it actually helps keep mosquitoes away from your outdoor space. It's one of those details that makes a real difference in the evening.\n\nAnd honestly, beach towns aren't exactly bug-free either — mosquitoes love waterfront areas just as much as anywhere else.\n\nIs that a dealbreaker for you, or more of a 'good to know' thing?"`,
     notes: [
       "Don't oversell 'no bugs' — it destroys trust when they arrive",
       "Solid structure with screens = concrete reassurance",

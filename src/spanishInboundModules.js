@@ -255,7 +255,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Objeción — Bichos / Preocupación por Fauna",
     cogTip: "Tómalo en serio — no lo descarte. Reconoce, luego reencuadra con detalles concretos.",
-    script: `"Totalmente válido — y no le voy a decir que en South Carolina no hay bichos, porque eso sería mentira.\n\nLa realidad es esta: está en una estructura sólida con mallas y puertas. No está en una carpa. La propiedad está bien mantenida y los huéspedes no reportan nada alarmante. Es más como sentarse en un porche cerrado que estar en el bosque abierto.\n\nY honestamente, los pueblos playeros tampoco están libres de mosquitos — las zonas costeras los tienen igual que cualquier otro lugar.\n\n¿Eso es algo que realmente lo detiene, o es más de 'bueno saberlo'?"`,
+    script: `"Totalmente válido — y no le voy a decir que en South Carolina no hay bichos, porque eso sería mentira.\n\nLa realidad es esta: está en una estructura sólida con mallas y puertas. No está en una carpa. La propiedad está bien mantenida y los huéspedes no reportan nada alarmante. Es más como sentarse en un porche cerrado que estar en el bosque abierto.\n\nAdemás, usamos leña tratada con un bio-insecticida natural — así que cuando tienen la fogata encendida, en realidad ayuda a mantener los mosquitos alejados del área exterior. Es uno de esos detalles que marca una diferencia real en las noches.\n\nY honestamente, los pueblos playeros tampoco están libres de mosquitos — las zonas costeras los tienen igual que cualquier otro lugar.\n\n¿Eso es algo que realmente lo detiene, o es más de 'bueno saberlo'?"`,
     notes: [
       "No sobrevendas 'sin bichos' — destruye la confianza cuando llegan",
       "Estructura sólida con mallas = tranquilidad concreta",
