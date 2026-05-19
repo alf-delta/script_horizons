@@ -131,7 +131,7 @@ export const INBOUND_DATA = {
     method: "SNAP",
     title: "Check Availability — Soft Close",
     cogTip: "Don't ask 'do you want to book?' — ask about dates. It's a smaller yes that leads naturally to the bigger one.",
-    script: `"Let me pull up availability for you right now. What dates were you thinking — do you have something specific in mind, or are you flexible?\n\n[After they give dates — check Cloudbeds]\n\nOkay, so I'm looking at [dates] — we have [availability]. The rate for that would be [price] for a [cabin/house]. That includes everything — the property, access to all the amenities, the whole experience.\n\nTo hold that date I'd just need your name and email, and we can get everything set up from there. Does that work?"`,
+    script: `"Let me pull up availability for you right now. What dates were you thinking — do you have something specific in mind, or are you flexible?\n\n[After they give dates — check Cloudbeds]\n\nOkay, so I'm looking at [dates] — we have [availability]. The rate for that would be [price] for a [Forest Villa/house]. That includes everything — the property, access to all the amenities, the whole experience.\n\nTo hold that date I'd just need your name and email, and we can get everything set up from there. Does that work?"`,
     notes: [
       "Check Cloudbeds in real time — don't guess on availability or price",
       "'Includes everything' = removes fear of hidden costs",
@@ -172,12 +172,11 @@ export const INBOUND_DATA = {
     stageNum: 5,
     method: "Complete",
     title: "Booking Confirmed — Call Complete",
-    cogTip: "Log it immediately. The follow-up email within the hour is what separates great guest experiences from forgettable ones.",
-    script: `POST-CALL CHECKLIST:\n\n✓ Confirm booking in Cloudbeds immediately\n✓ Send confirmation email within the hour\n✓ Attach guest guide / property overview\n✓ Log in CRM: name, dates, property type, how they found us (ad query)\n✓ Note any personal details (kids' ages, occasion, group size) for guest experience team\n✓ Set reminder to check in 48hrs before arrival`,
+    cogTip: "Log it immediately. Confirm in Cloudbeds and send the WhatsApp within the hour.",
+    script: `POST-CALL CHECKLIST:\n\n✓ Confirm booking in Cloudbeds immediately, write the details in the notes section\n✓ Send confirmation WhatsApp text within the hour`,
     notes: [
-      "The 48hr pre-arrival check-in = huge for guest satisfaction",
-      "Log the ad query source in CRM — valuable for marketing feedback",
-      "Personal details to guest experience team = surprise-and-delight moments"
+      "Write full booking details in the Cloudbeds notes section before moving on",
+      "WhatsApp confirmation within the hour — sets the tone for the guest experience"
     ],
     responses: []
   },
@@ -208,7 +207,7 @@ export const INBOUND_DATA = {
     method: "H2H",
     title: "Objection — Really Wanted the Beach",
     cogTip: "Don't fight the beach. Validate it fully, then zoom out to the deeper desire behind it — which is probably relaxation, sunshine, and a break. Then show how you deliver all of that without the downsides.",
-    script: `"Honestly, I get it — there's something about the beach that just feels like vacation. I'm not here to talk you out of that.\n\nCan I ask — what is it about the beach that you're most looking forward to? Is it the water, the sun, the vibe of being somewhere different?\n\n[Listen]\n\nYeah, that makes total sense. Here's the thing — most of what you're describing, we actually have. [Sun and warmth: 'South Carolina summers are gorgeous inland too, you'll be outside all day.'] [Water: 'We have kayaking on the water, fishing, a pool.'] [The vibe of being away: 'Private cottage, no schedule, no obligations — that's exactly what we're built for.']\n\nThe one thing we can't offer is ocean waves. But everything else? It's here — and honestly without the downsides that come with beach towns in peak season."`,
+    script: `"Honestly, I get it — there's something about the beach that just feels like vacation. I'm not here to talk you out of that.\n\nCan I ask — what is it about the beach that you're most looking forward to? Is it the water, the sun, the vibe of being somewhere different?\n\n[Listen]\n\nYeah, that makes total sense. Here's the thing — everything you're describing is what we actually have. [Sun and warmth: 'South Carolina summers are gorgeous inland too, you'll be outside all day.'] [Water: 'We have kayaking on the water, fishing, a pool. Our private lake is totally swimmable, and you can definitely sunbathe right on its shore.'] [The vibe of being away: 'Private cottage, no schedule, no obligations — that's exactly what we're built for.']\n\nThe one thing we can't offer is ocean waves. But everything else? It's here — and honestly without the downsides that come with beach towns in peak season."`,
     notes: [
       "Ask what they love about the beach — most answers are addressable",
       "Match each beach desire to a glamping equivalent specifically",
@@ -271,9 +270,9 @@ export const INBOUND_DATA = {
     method: "SNAP",
     title: "Objection — Price / Cost Concern",
     cogTip: "Anchor to value, not just number. Compare to what a beach town trip actually costs when you add it all up.",
-    script: `"That's a fair question — and I want to give you a real answer, not a sales pitch.\n\nOur cabins start at around $910 for a 2-night stay, houses at around $1,460 for 2 nights. That covers the full property — there's no resort fee, no parking fee, no 'amenity charge.' What you see is what you pay.\n\nHere's the thing — when you add up a beach town trip: the hotel, parking, restaurant meals twice a day, entry fees... it adds up fast. With us, you've got your own space, your own kitchen if you want it, and all the activities on site are included.\n\nWhat was your rough budget for the trip? That'll help me figure out what makes sense for you."`,
+    script: `"That's a fair question — and I want to give you a real answer, not a sales pitch.\n\nWe are currently running a 25% promotion, and our boutique Forest Villas start at around $910 for a 2-night stay, houses at around $1,460 for 2 nights. That covers the full property usage — there's no resort fee, no parking fee, no 'amenity charge.' What you see is what you pay.\n\nBecause here's the thing — when you add up a beach town trip: the hotel, parking, restaurant meals twice a day, entry fees... it adds up fast. With us, you've got your own comfortable space with everything you need: your own kitchen if you want it, and all the activities on site are included.\n\nWhat was your rough budget for the trip? That'll help me figure out what makes sense for you."`,
     notes: [
-      "State real numbers — $910 cabin, $1,460 house — don't be vague",
+      "State real numbers — $910 Forest Villa, $1,460 house — don't be vague",
       "'No resort fee, no parking fee' = speaks directly to a known frustration",
       "The total-trip-cost comparison to beach towns is effective — use it",
       "Asking about budget = moves toward finding a fit, not defending a price"
@@ -354,7 +353,7 @@ export const INBOUND_DATA = {
     method: "H2H",
     title: "What Is Glamping?",
     cogTip: "Keep it simple and visual. Most people picture a fancy tent. Replace that image immediately.",
-    script: `"Great question — honestly, the name is a little misleading. 'Glamping' is basically glamorous camping, but in practice it means a private cottage or cabin in a natural setting with all the comforts of a normal accommodation.\n\nWe're talking: real beds, air conditioning, a bathroom, your own outdoor space. Not a tent, not a sleeping bag, not camp food. Just a private place to stay that happens to be surrounded by nature instead of a parking lot.\n\nIf you've ever stayed in a cabin rental, it's similar to that — but on a curated property with things to do, so you're not just sitting in a cabin staring at trees.\n\nDoes that help clarify it?"`,
+    script: `"Great question — honestly, the name is a little misleading. 'Glamping' is basically glamorous camping, but in practice it means a private cottage or cabin in a natural setting with all the comforts of a normal accommodation.\n\nWe're talking: real king-size beds, premium appliances, air conditioning, private bathroom with complimentary vanity kit, your own outdoor space. Not a tent, not a sleeping bag, not camp food. Just a private place to stay that happens to be surrounded by nature instead of a parking lot.\n\nIf you've ever stayed in a cabin rental, it's similar to that — but on a curated, elevated property with a plethora of things to do, so you're not just sitting in a cabin staring at trees.\n\nDoes that help clarify it?"`,
     notes: [
       "'Not a tent, not a sleeping bag, not camp food' — say what it isn't first",
       "Cabin rental comparison is the most relatable frame for Americans",

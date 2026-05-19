@@ -167,7 +167,7 @@ const SCRIPT_DATA = {
     method: "H2H",
     title: "Property & Experience Details",
     cogTip: "Paint a picture. Use sensory language — they'll sell this to their clients.",
-    script: `"We operate [X] properties across South Carolina — think luxury tents, treehouses, and cabins in settings like [specific locations]. Each site is curated for a premium experience: private fire pits, local farm-to-table dining options, guided nature excursions.\n\nOur guests are typically couples, small groups, or corporate teams looking for something beyond the standard resort. The kind of experience your clients will actually post about and come back to tell you 'thank you' for recommending."`,
+    script: `"We operate [X] properties across South Carolina — think luxury tents, treehouses, and Forest Villas in settings like [specific locations]. Each site is curated for a premium experience: private fire pits, local farm-to-table dining options, guided nature excursions.\n\nOur guests are typically couples, small groups, or corporate teams looking for something beyond the standard resort. The kind of experience your clients will actually post about and come back to tell you 'thank you' for recommending."`,
     notes: [
       "Specificity sells: name real locations and amenities",
       "End with emotional payoff for the AGENT (client gratitude = retention)",
@@ -397,9 +397,9 @@ const SCRIPT_DATA = {
     method: "SNAP",
     title: '"Commission Is Too Low"',
     cogTip: "Anchor on total value, not just percentage. And mention the tiered upside.",
-    script: `"I completely understand — commission percentage is important, so let me put it into context.\n\nOur typical bookings range from approximately $910 for a 2-night cabin stay to $1,460 for a 2-night house stay. Based on our tiered structure, that translates to roughly $135–$365+ per booking, depending on volume and monthly performance — all with no operational overhead on your end.\n\nBecause our model is tied to total booking value rather than volume, higher-end and multi-unit bookings can significantly increase your effective earnings. As your monthly booking revenue grows, your commission scales accordingly — reaching up to 25%, which creates meaningful upside for agencies working with premium clients."`,
+    script: `"I completely understand — commission percentage is important, so let me put it into context.\n\nOur typical bookings range from approximately $910 for a 2-night Forest Villa stay to $1,460 for a 2-night house stay. Based on our tiered structure, that translates to roughly $135–$365+ per booking, depending on volume and monthly performance — all with no operational overhead on your end.\n\nBecause our model is tied to total booking value rather than volume, higher-end and multi-unit bookings can significantly increase your effective earnings. As your monthly booking revenue grows, your commission scales accordingly — reaching up to 25%, which creates meaningful upside for agencies working with premium clients."`,
     notes: [
-      "Anchor with real booking price ranges — $910 cabin, $1,460 house",
+      "Anchor with real booking price ranges — $910 Forest Villa, $1,460 house",
       "Reframe from % to $ earned per referral — more tangible",
       "Emphasize: higher-end clients = faster tier progression",
       "25% ceiling is the aspirational hook — end on it"
@@ -456,7 +456,7 @@ const SCRIPT_DATA = {
     method: "H2H",
     title: "Seasonality & Availability",
     cogTip: "Turn seasonality from a weakness into a selling point.",
-    script: `"Great question — we operate year-round, but the experience shifts with the seasons. Spring and fall are peak for couples and small groups. Summer is big for families. And winter — that's actually our hidden gem: fire pit season, sauna season, and that cozy cabin vibe that clients love. Also, as you know, the winters here in South Carolina are very mild!\n\nSo from a referral standpoint, there's always something to recommend regardless of when your client wants to travel."`,
+    script: `"Great question — we operate year-round, but the experience shifts with the seasons. Spring and fall are peak for couples and small groups. Summer is big for families. And winter — that's actually our hidden gem: fire pit season, sauna season, and that cozy Forest Villa vibe that clients love. Also, as you know, the winters here in South Carolina are very mild!\n\nSo from a referral standpoint, there's always something to recommend regardless of when your client wants to travel."`,
     notes: [
       "Year-round = consistent referral opportunity",
       "Each season has a hook — give them selling points",

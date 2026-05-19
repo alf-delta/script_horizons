@@ -1,0 +1,82 @@
+{
+  "instructions": "Fill in the values below. Once complete, all [placeholders] in the scripts (EN + ES, B2B + Birthday) will be replaced.",
+
+  "commission": {
+    "base_rate_percent": {
+      "placeholder": "[X]%",
+      "question": "What is the standard partner commission rate per booking?",
+      "example": "10%",
+      "value": null
+    },
+    "payout_frequency": {
+      "placeholder": "[monthly / per booking]",
+      "question": "How are commissions paid out — monthly or per booking?",
+      "example": "monthly",
+      "value": null
+    },
+    "avg_booking_price_low": {
+      "placeholder": "$[Y]",
+      "question": "What is the low end of average booking price per night?",
+      "example": "$150",
+      "value": null
+    },
+    "avg_booking_price_high": {
+      "placeholder": "$[Z]",
+      "question": "What is the high end of average booking price per night?",
+      "example": "$350",
+      "value": null
+    },
+    "typical_referral_earning": {
+      "placeholder": "$[amount]",
+      "question": "How much does an agency earn on a typical 2-night referral?",
+      "example": "$50",
+      "value": null
+    },
+    "tier_threshold_referrals": {
+      "placeholder": "[N]+",
+      "question": "How many referrals per quarter to qualify for the higher tier?",
+      "example": "10+",
+      "value": null
+    },
+    "tier_higher_rate_percent": {
+      "placeholder": "[higher]%",
+      "question": "What is the higher-tier commission rate?",
+      "example": "15%",
+      "value": null
+    },
+    "top_partner_annual_earning": {
+      "placeholder": "$[annual amount]",
+      "question": "How much do top agency partners earn annually from glamping referrals?",
+      "example": "$5,000",
+      "value": null
+    }
+  },
+
+  "properties": {
+    "property_count": {
+      "placeholder": "[X] properties",
+      "question": "How many properties does Horizons Getaways operate?",
+      "example": "3",
+      "value": null
+    },
+    "specific_locations": {
+      "placeholder": "[specific locations]",
+      "question": "Which specific locations in South Carolina can be named on a call?",
+      "example": "Sand Hills, Lake Marion, Edisto River",
+      "value": null
+    }
+  },
+
+  "per_call_fields_no_action_needed": {
+    "note": "These are filled by the manager before/during each call. No global replacement needed.",
+    "fields": [
+      "[Name] — client's name",
+      "[Your Name] — manager's name",
+      "[Agency Name] — agency being called",
+      "[Day A], [Day B], [Time] — meeting time slots",
+      "[email] — manager's contact email",
+      "[adventure travel / Southeast destinations / boutique experiences] — agency niche",
+      "[season/quarter] — current season"
+    ]
+  }
+}

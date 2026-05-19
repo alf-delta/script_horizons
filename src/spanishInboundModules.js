@@ -38,7 +38,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "El Pivote — De Playa a Naturaleza",
     cogTip: "No desestimes lo que querían. Valídalo primero. Luego ofrece una reinterpretación — no un reemplazo. El objetivo es '¿qué tal si le cuento que hay algo aún mejor para lo que realmente busca?'",
-    script: `"Lo entiendo perfectamente — South Carolina tiene lugares costeros increíbles, y ese ambiente de pueblo playero es muy atractivo. Pero permítame compartirle algo.\n\nMuchos de nuestros huéspedes llegaron a nosotros de la misma manera — pensando en playa, y luego vivieron algo completamente diferente y, honestamente, no podían creer que no lo habían hecho antes.\n\nSomos un retiro de glamping a unos 90 minutos de Charlotte, en medio de la naturaleza en South Carolina. Imagínese: cabañas privadas, fogatas al aire libre, kayak, piscina — pero sin las multitudes, el tráfico, ni los restaurantes caros que uno encuentra en los pueblos playeros en temporada alta.\n\nEs el mismo South Carolina, pero con una esencia completamente diferente. Más privado, más personal, y honestamente más memorable. ¿El viaje es en pareja, con familia, o con un grupo de amigos?"`,
+    script: `"Lo entiendo perfectamente — South Carolina tiene lugares costeros increíbles, y ese ambiente de pueblo playero es muy atractivo. Pero permítame compartirle algo.\n\nMuchos de nuestros huéspedes llegaron a nosotros de la misma manera — pensando en playa, y luego vivieron algo completamente diferente y, honestamente, no podían creer que no lo habían hecho antes.\n\nSomos un retiro de glamping a unos 90 minutos de Charlotte, en medio de la naturaleza en South Carolina. Imagínese: Forest Villas privadas, fogatas al aire libre, kayak, piscina — pero sin las multitudes, el tráfico, ni los restaurantes caros que uno encuentra en los pueblos playeros en temporada alta.\n\nEs el mismo South Carolina, pero con una esencia completamente diferente. Más privado, más personal, y honestamente más memorable. ¿El viaje es en pareja, con familia, o con un grupo de amigos?"`,
     notes: [
       "'Lo entiendo perfectamente' — valida antes de pivotar, nunca descarte",
       "La frase 'llegaron a nosotros de la misma manera' = prueba social + normaliza el pivote",
@@ -62,7 +62,8 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Lo Que Ofrecemos — La Experiencia",
     cogTip: "Pinta una imagen. No listes amenidades — describe una sensación. 'Despertar solo con árboles y pájaros alrededor' supera cualquier lista de características.",
-    script: `"Le cuento cómo es Horizons Getaways en la práctica: llega a su propia cabaña privada — sin paredes compartidas, sin recepción, sin lobby. Solo su espacio, su fogata, y la naturaleza alrededor.\n\nDurante el día tiene kayak, pesca, bicicletas eléctricas, piscina, voleibol — hay bastante para hacer si quiere actividad. Y si prefiere sentarse en el porche con un café y no hablar con nadie, también puede hacer eso.\n\nEstamos en South Carolina, a unos 90 minutos de Charlotte — así que es una escapada de verdad sin el estrés de un vuelo.\n\n¿Qué fechas estaba pensando? Puedo revisar disponibilidad y darle una idea real de los precios."`,
+    script: `"Le cuento cómo es Horizons Getaways en la práctica: llega a su propia Forest Villa privada — sin paredes compartidas, sin recepción, sin lobby. Solo su espacio, su fogata, y la naturaleza alrededor.\n\nDurante el día tiene kayak, pesca, bicicletas eléctricas, piscina, voleibol — hay bastante para hacer si quiere actividad. Y si prefiere sentarse en el porche con un café y no hablar con nadie, también puede hacer eso.\n\nEstamos en South Carolina, a unos 90 minutos de Charlotte — así que es una escapada de verdad sin el estrés de un vuelo.\n\n¿Qué fechas estaba pensando? Puedo revisar disponibilidad y darle una idea real de los precios."`,
+
     notes: [
       "'Sin paredes compartidas, sin recepción' — habla directamente de lo que la gente detesta de los hoteles",
       "Lista actividades pero equilibra con la opción de 'no hacer nada' — cubre ambos tipos de huéspedes",
@@ -86,7 +87,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Pitch para Parejas — Escapada Romántica",
     cogTip: "El romance tiene que ver con privacidad, presencia y novedad. Un pueblo playero raramente entrega ninguna de las tres. Enfatiza lo que el glamping hace mejor.",
-    script: `"Perfecto — honestamente, para un viaje de pareja, esto podría ser incluso mejor que un pueblo playero.\n\nImagínese: su propia cabaña privada, una fogata justo afuera de la puerta, despertar con nada más que árboles y silencio — sin multitudes, sin ruido, sin personas chocando con ustedes en una explanada.\n\nNuestros huéspedes en pareja nos dicen constantemente que fue el viaje más presente, más desconectado de todo, que han tenido en años. No pasan la mitad del día buscando estacionamiento o esperando mesa en un restaurante — simplemente están ahí, juntos.\n\nTambién tenemos kayak y piscina si quieren mezclar algo de actividad, pero la vibra es realmente sobre desacelerar.\n\n¿Qué fechas están considerando? Puedo revisar disponibilidad y darle una imagen real de lo que costaría."`,
+    script: `"Perfecto — honestamente, para un viaje de pareja, esto podría ser incluso mejor que un pueblo playero.\n\nImagínese: su propia Forest Villa privada, una fogata justo afuera de la puerta, despertar con nada más que árboles y silencio — sin multitudes, sin ruido, sin personas chocando con ustedes en una explanada.\n\nNuestros huéspedes en pareja nos dicen constantemente que fue el viaje más presente, más desconectado de todo, que han tenido en años. No pasan la mitad del día buscando estacionamiento o esperando mesa en un restaurante — simplemente están ahí, juntos.\n\nTambién tenemos kayak y piscina si quieren mezclar algo de actividad, pero la vibra es realmente sobre desacelerar.\n\n¿Qué fechas están considerando? Puedo revisar disponibilidad y darle una imagen real de lo que costaría."`,
     notes: [
       "La privacidad es romántica, y los pueblos playeros notoriamente carecen de ella en verano",
       "'El viaje más presente en años' = lenguaje de experiencia emocional cúspide",
@@ -109,7 +110,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Pitch para Familias — Todos Ganan",
     cogTip: "Los padres quieren que los niños estén entretenidos y ellos sin estrés. Los pueblos playeros frecuentemente entregan lo contrario. Presenta el glamping como el viaje donde todos la pasan bien de verdad.",
-    script: `"¡Los viajes familiares son donde más brillamos! Le digo por qué.\n\nLos pueblos playeros con niños pueden ser... agotadores. Arena en todo, bloqueador solar cada hora, los niños aburridos al segundo día, todo el rollo.\n\nEn Horizons, los niños tienen actividades para todo el día — bicicletas eléctricas, kayak, pesca, piscina, voleibol, senderos naturales. Quedan genuinamente entretenidos y cansados para la noche. Mientras tanto, usted por fin puede relajarse de verdad.\n\nEstán en una cabaña privada — así que la siesta es siesta, la hora de dormir es hora de dormir, y nadie comparte paredes con desconocidos. Se siente como su propia casa base.\n\n¿Qué edades tienen los niños? Eso me ayuda a orientarlos mejor."`,
+    script: `"¡Los viajes familiares son donde más brillamos! Le digo por qué.\n\nLos pueblos playeros con niños pueden ser... agotadores. Arena en todo, bloqueador solar cada hora, los niños aburridos al segundo día, todo el rollo.\n\nEn Horizons, los niños tienen actividades para todo el día — bicicletas eléctricas, kayak, pesca, piscina, voleibol, senderos naturales. Quedan genuinamente entretenidos y cansados para la noche. Mientras tanto, usted por fin puede relajarse de verdad.\n\nEstán en su propia Forest Villa privada — así que la siesta es siesta, la hora de dormir es hora de dormir, y nadie comparte paredes con desconocidos. Se siente como su propia casa base.\n\n¿Qué edades tienen los niños? Eso me ayuda a orientarlos mejor."`,
     notes: [
       "La frase de la arena en todo es universal — todo padre ríe y asiente",
       "'Cansados para la noche' = sueño dorado de todo padre — dilo",
@@ -133,7 +134,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "SNAP",
     title: "Verificar Disponibilidad — Cierre Suave",
     cogTip: "No preguntes '¿quiere reservar?' — pregunta por las fechas. Es un 'sí' más pequeño que lleva naturalmente al más grande.",
-    script: `"Déjeme revisar disponibilidad ahora mismo. ¿Qué fechas tienen en mente — tienen algo específico o son flexibles?\n\n[Después de que dan fechas — revisar Cloudbeds]\n\nPerfecto, estoy viendo las fechas de [fechas] — tenemos [disponibilidad]. La tarifa para eso sería de [precio] para [cabaña/casa]. Eso incluye todo — la propiedad, acceso a todas las amenidades, la experiencia completa.\n\nPara apartar esa fecha solo necesito su nombre y correo, y desde ahí coordinamos todo. ¿Le parece bien?"`,
+    script: `"Déjeme revisar disponibilidad ahora mismo. ¿Qué fechas tienen en mente — tienen algo específico o son flexibles?\n\n[Después de que dan fechas — revisar Cloudbeds]\n\nPerfecto, estoy viendo las fechas de [fechas] — tenemos [disponibilidad]. La tarifa para eso sería de [precio] para [Forest Villa/casa]. Eso incluye todo — la propiedad, acceso a todas las amenidades, la experiencia completa.\n\nPara apartar esa fecha solo necesito su nombre y correo, y desde ahí coordinamos todo. ¿Le parece bien?"`,
     notes: [
       "Revisar Cloudbeds en tiempo real — no adivinar disponibilidad ni precio",
       "'Incluye todo' = elimina el miedo a costos ocultos",
@@ -156,7 +157,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "SNAP",
     title: "Confirmar la Reserva",
     cogTip: "Mantén la energía cálida y emocionada — están reservando vacaciones, no firmando papeleo. Que sientan que el viaje ya empezó.",
-    script: `"¡Perfecto! Entonces los tengo para [fechas] — [tipo de cabaña/casa]. El total es de [precio].\n\nNecesito su nombre, correo, y les enviamos una confirmación con todo lo que necesitan. El check-in es a las [hora], check-out a las [hora], y les incluyo un enlace a nuestra guía de huéspedes para que empiecen a emocionarse con lo que hay disponible en el lugar.\n\nY de verdad — van a encantarse. Este es de esos viajes de los que la gente regresa y empieza a planear el siguiente de inmediato. ¡Bienvenidos a Horizons, [Nombre]!"`,
+    script: `"¡Perfecto! Entonces los tengo para [fechas] — [Forest Villa/casa]. El total es de [precio].\n\nNecesito su nombre, correo, y les enviamos una confirmación con todo lo que necesitan. El check-in es a las [hora], check-out a las [hora], y les incluyo un enlace a nuestra guía de huéspedes para que empiecen a emocionarse con lo que hay disponible en el lugar.\n\nY de verdad — van a encantarse. Este es de esos viajes de los que la gente regresa y empieza a planear el siguiente de inmediato. ¡Bienvenidos a Horizons, [Nombre]!"`,
     notes: [
       "Confirma fechas, tipo y precio en voz alta — evita confusiones después",
       "Los detalles de check-in/out reducen la ansiedad y crean impulso",
@@ -175,12 +176,11 @@ export const SPANISH_INBOUND_DATA = {
     stageNum: 5,
     method: "Complete",
     title: "Reserva Confirmada — Llamada Completa",
-    cogTip: "Regístralo de inmediato. El correo de seguimiento dentro de la hora es lo que separa las grandes experiencias de huésped de las olvidables.",
-    script: `CHECKLIST POST-LLAMADA:\n\n✓ Confirmar reserva en Cloudbeds de inmediato\n✓ Enviar correo de confirmación dentro de la hora\n✓ Adjuntar guía de huéspedes / descripción de la propiedad\n✓ Registrar en CRM: nombre, fechas, tipo de propiedad, cómo nos encontraron (consulta del anuncio)\n✓ Anotar detalles personales (edades de niños, ocasión, tamaño del grupo) para el equipo de experiencia al huésped\n✓ Programar recordatorio para contactarlos 48hrs antes de la llegada`,
+    cogTip: "Regístralo de inmediato. Confirma en Cloudbeds y envía el WhatsApp dentro de la hora.",
+    script: `CHECKLIST POST-LLAMADA:\n\n✓ Confirmar reserva en Cloudbeds de inmediato, escribir los detalles en la sección de notas\n✓ Enviar mensaje de confirmación por WhatsApp dentro de la hora`,
     notes: [
-      "El contacto pre-llegada de 48hrs = enorme para la satisfacción del huésped",
-      "Registrar la consulta del anuncio en CRM — valioso para retroalimentación de marketing",
-      "Detalles personales al equipo de experiencia = momentos de sorpresa y deleite"
+      "Escribir todos los detalles de la reserva en las notas de Cloudbeds antes de continuar",
+      "El WhatsApp dentro de la hora — define el tono de la experiencia del huésped"
     ],
     responses: []
   },
@@ -211,7 +211,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Objeción — Realmente Quería la Playa",
     cogTip: "No pelees con la playa. Valídala completamente, luego amplía hacia el deseo más profundo detrás de ella — que probablemente es relajación, sol y descanso. Luego muestra cómo entregas todo eso sin los problemas.",
-    script: `"Honestamente lo entiendo — hay algo en la playa que simplemente se siente como vacaciones. No estoy aquí para quitarle esa idea.\n\n¿Puedo preguntarle — qué es lo que más le atrae de la playa? ¿Es el agua, el sol, la sensación de estar en un lugar diferente?\n\n[Escuchar]\n\nTiene todo el sentido. Mire — la mayoría de eso que describe, nosotros sí lo tenemos. [Sol y calor: 'Los veranos en South Carolina son preciosos tierra adentro también, va a estar afuera todo el día.'] [Agua: 'Tenemos kayak, pesca, piscina.'] [La vibra de estar lejos: 'Cabaña privada, sin horarios, sin obligaciones — para eso exactamente estamos hechos.']\n\nLo único que no podemos ofrecer son las olas del mar. Pero todo lo demás está aquí — y honestamente sin los inconvenientes que vienen con los pueblos playeros en temporada alta."`,
+    script: `"Honestamente lo entiendo — hay algo en la playa que simplemente se siente como vacaciones. No estoy aquí para quitarle esa idea.\n\n¿Puedo preguntarle — qué es lo que más le atrae de la playa? ¿Es el agua, el sol, la sensación de estar en un lugar diferente?\n\n[Escuchar]\n\nTiene todo el sentido. Mire — todo lo que describe es exactamente lo que tenemos. [Sol y calor: 'Los veranos en South Carolina son preciosos tierra adentro también, va a estar afuera todo el día.'] [Agua: 'Tenemos kayak, pesca, piscina. Nuestro lago privado es totalmente navegable, y definitivamente puede tomar el sol en su orilla.'] [La vibra de estar lejos: 'Forest Villa privada, sin horarios, sin obligaciones — para eso exactamente estamos hechos.']\n\nLo único que no podemos ofrecer son las olas del mar. Pero todo lo demás está aquí — y honestamente sin los inconvenientes que vienen con los pueblos playeros en temporada alta."`,
     notes: [
       "Pregunta qué les gusta de la playa — la mayoría de las respuestas son abordables",
       "Relaciona cada deseo de playa con un equivalente de glamping específicamente",
@@ -233,7 +233,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "Objeción — No Soy de Naturaleza / Aire Libre",
     cogTip: "El punto entero del glamping es que es para gente que no es de naturaleza. Empieza con eso.",
-    script: `"¿Sabe qué? Eso es exactamente lo que más escuchamos de los huéspedes antes de llegar. Y después regresan.\n\nEl glamping no es acampar. No está armando una carpa, no está durmiendo en el suelo, no está cocinando sobre una fogata si no quiere. Está en una cabaña privada con una cama de verdad, aire acondicionado, baño — es básicamente un alquiler de cabaña que resulta estar rodeado de naturaleza.\n\nNo tiene que ser de naturaleza para disfrutarlo. Honestamente puede pasar todo el viaje sentado en el porche leyendo un libro. La naturaleza es solo el paisaje de fondo — no es un requisito.\n\n¿Eso cambia la imagen?"`,
+    script: `"¿Sabe qué? Eso es exactamente lo que más escuchamos de los huéspedes antes de llegar. Y después regresan.\n\nEl glamping no es acampar. No está armando una carpa, no está durmiendo en el suelo, no está cocinando sobre una fogata si no quiere. Está en una Forest Villa privada con una cama de verdad, aire acondicionado, baño — es básicamente un alquiler de cabaña que resulta estar rodeado de naturaleza.\n\nNo tiene que ser de naturaleza para disfrutarlo. Honestamente puede pasar todo el viaje sentado en el porche leyendo un libro. La naturaleza es solo el paisaje de fondo — no es un requisito.\n\n¿Eso cambia la imagen?"`,
     notes: [
       "'Lo que más escuchamos antes de llegar — y después regresan' = prueba social",
       "La distinción camping vs glamping es crucial — dígalo explícitamente",
@@ -275,9 +275,9 @@ export const SPANISH_INBOUND_DATA = {
     method: "SNAP",
     title: "Objeción — Precio / Costo",
     cogTip: "Ancla en el valor, no solo en el número. Compara con lo que realmente cuesta un viaje a un pueblo playero cuando sumas todo.",
-    script: `"Es una pregunta justa — y quiero darle una respuesta real, no un discurso de ventas.\n\nNuestras cabañas empiezan en alrededor de $910 por una estadía de 2 noches, las casas alrededor de $1,460 por 2 noches. Eso cubre la propiedad completa — sin tarifa de resort, sin cobro de estacionamiento, sin 'cargo por amenidades'. Lo que ve es lo que paga.\n\nFíjese en esto — cuando suma un viaje a un pueblo playero: el hotel, el estacionamiento, las comidas en restaurantes dos veces al día, los cobros de entrada... se acumula rápido. Con nosotros tiene su propio espacio, cocina si la quiere, y todas las actividades del lugar están incluidas.\n\n¿Cuál era su presupuesto aproximado para el viaje? Eso me ayuda a ver qué tiene más sentido para usted."`,
+    script: `"Es una pregunta justa — y quiero darle una respuesta real, no un discurso de ventas.\n\nActualmente estamos con una promoción del 25%, y nuestras Forest Villas boutique empiezan en alrededor de $910 por una estadía de 2 noches, las casas alrededor de $1,460 por 2 noches. Eso cubre el uso completo de la propiedad — sin tarifa de resort, sin cobro de estacionamiento, sin 'cargo por amenidades'. Lo que ve es lo que paga.\n\nPorque fíjese en esto — cuando suma un viaje a un pueblo playero: el hotel, el estacionamiento, las comidas en restaurantes dos veces al día, los cobros de entrada... se acumula rápido. Con nosotros tiene su propio espacio cómodo con todo lo que necesita: cocina si la quiere, y todas las actividades del lugar están incluidas.\n\n¿Cuál era su presupuesto aproximado para el viaje? Eso me ayuda a ver qué tiene más sentido para usted."`,
     notes: [
-      "Números reales — $910 cabaña, $1,460 casa — no sea vago",
+      "Números reales — $910 Forest Villa, $1,460 casa — no sea vago",
       "'Sin tarifa de resort, sin cobro de estacionamiento' = habla directamente de una frustración conocida",
       "La comparación del costo total del viaje a pueblo playero es efectiva — úsala",
       "Preguntar por el presupuesto = avanza hacia encontrar una opción, no defender un precio",
@@ -361,7 +361,7 @@ export const SPANISH_INBOUND_DATA = {
     method: "H2H",
     title: "¿Qué Es el Glamping?",
     cogTip: "Mantenlo simple y visual. La mayoría imagina una carpa lujosa. Reemplaza esa imagen de inmediato.",
-    script: `"Buena pregunta — honestamente el nombre es un poco engañoso. 'Glamping' es básicamente camping glamoroso, pero en la práctica significa una cabaña privada en un entorno natural con todas las comodidades de un alojamiento normal.\n\nHablamos de: camas de verdad, aire acondicionado, baño, su propio espacio al aire libre. No es una carpa, no es una bolsa de dormir, no es comida de campamento. Es simplemente un lugar privado para quedarse que resulta estar rodeado de naturaleza en lugar de un estacionamiento.\n\nSi alguna vez se ha quedado en un alquiler de cabaña, es similar a eso — pero en una propiedad curada con actividades incluidas, así que no están solo sentados en una cabaña mirando árboles.\n\n¿Eso lo aclara?"`,
+    script: `"Buena pregunta — honestamente el nombre es un poco engañoso. 'Glamping' es básicamente camping glamoroso, pero en la práctica significa una cabaña privada en un entorno natural con todas las comodidades de un alojamiento normal.\n\nHablamos de: camas king-size de verdad, electrodomésticos premium, aire acondicionado, baño privado con kit de tocador incluido, su propio espacio al aire libre. No es una carpa, no es una bolsa de dormir, no es comida de campamento. Es simplemente un lugar privado para quedarse que resulta estar rodeado de naturaleza en lugar de un estacionamiento.\n\nSi alguna vez se ha quedado en un alquiler de cabaña, es similar a eso — pero en una propiedad curada y de nivel superior con muchas actividades disponibles, así que no están solo sentados en una cabaña mirando árboles.\n\n¿Eso lo aclara?"`,
     notes: [
       "'No es una carpa, no es bolsa de dormir, no es comida de campamento' — diga lo que NO es primero",
       "La comparación con alquiler de cabaña es el marco más accesible",
